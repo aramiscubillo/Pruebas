@@ -1,10 +1,18 @@
-﻿using System;
+﻿using Entities.Mappings;
+using Entities.WPPEntities;
+using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
+using NHibernate;
+using NHibernate.Tool.hbm2ddl;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using WPP.Service.BaseServiceClasses;
 
 namespace WPP
 {
@@ -12,13 +20,94 @@ namespace WPP
     // visit http://go.microsoft.com/?LinkId=9394801
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static ISessionFactory SessionFactory;
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
 
+            configureNHibernate();
+
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            createDB();
+        }
+
+
+        private void configureNHibernate()
+        {
+            var nhConfig = Fluently.Configure()
+                    .Database(MsSqlConfiguration.MsSql2008
+                    .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
+                        .AdoNetBatchSize(100))
+                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
+                 .ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
+                 .Create(true, true))
+                        .BuildConfiguration()
+                        .AddProperties(new Dictionary<string, string>
+                               {
+                                   { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
+                                });
+            SessionFactory = nhConfig.BuildSessionFactory();
+          
+        }
+
+        //private void configureNHibernate()
+        //{
+        //    var nhConfig = Fluently.Configure()
+        //            .Database(MsSqlConfiguration.MsSql2008
+        //            .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
+        //                .AdoNetBatchSize(100))
+        //                .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CitaMapping>())
+        //        /* .BuildConfiguration()
+        //         .AddProperties(new Dictionary<string, string>
+        //                {
+        //                    { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
+        //                 });*/
+        //        //.ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true))
+        //        .ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
+        //            .BuildConfiguration()
+        //                .AddProperties(new Dictionary<string, string>
+        //                       {
+        //                           { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
+        //                        });
+        //    SessionFactory = nhConfig.BuildSessionFactory();
+        //    //createBaseData();
+        //}
+
+
+        protected void Application_BeginRequest()
+        {
+            CultureInfo cInf = new CultureInfo("en-US", false);
+
+            cInf.DateTimeFormat.DateSeparator = "/";
+            cInf.DateTimeFormat.ShortDatePattern = "dd/MM/yyyy";
+            cInf.DateTimeFormat.LongDatePattern = "dd/MM/yyyy hh:mm:ss tt";
+
+            System.Threading.Thread.CurrentThread.CurrentCulture = cInf;
+            System.Threading.Thread.CurrentThread.CurrentUICulture = cInf;
+        }
+
+
+
+
+        private void createDB()
+        {
+             IServiceFactory<Usuario>serviceFactory = new ServiceFactory<Usuario>(MvcApplication.SessionFactory);
+            IService<Usuario> usuarioService = serviceFactory.GetUsuarioService();
+
+            Usuario usuario = new Usuario();
+
+            usuario.Id = new Guid();
+            usuario.CreateDate = DateTime.Now;
+            usuario.DateLastModified = DateTime.Now;
+            usuario.IsDeleted = false;
+            usuario.Version = 1;
+            usuario.Nombre = "Test 1";
+
+            usuarioService.Create(usuario);
         }
     }
 }
