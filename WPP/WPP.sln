@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPP", "WPP\WPP.csproj", "{4EB664AE-CEB8-49BF-AFE9-842942D4BD77}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPP.Tests", "WPP.Tests\WPP.Tests.csproj", "{5F3B974C-6A69-4460-8519-C24180EFE485}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "ClassLibrary1\Entities.csproj", "{9AAA1DDF-1BCE-4582-BB8F-DC300743E039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPP.Mapper", "WPP.Mapper\WPP.Mapper.csproj", "{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPP.Model", "WPP.Model\WPP.Model.csproj", "{F1B0EC03-CA4C-4644-9D83-6436EC804B65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,26 @@ Global
 		{9AAA1DDF-1BCE-4582-BB8F-DC300743E039}.Release|ARM.ActiveCfg = Release|Any CPU
 		{9AAA1DDF-1BCE-4582-BB8F-DC300743E039}.Release|x64.ActiveCfg = Release|Any CPU
 		{9AAA1DDF-1BCE-4582-BB8F-DC300743E039}.Release|x86.ActiveCfg = Release|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Release|x64.ActiveCfg = Release|Any CPU
+		{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}.Release|x86.ActiveCfg = Release|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Release|x64.ActiveCfg = Release|Any CPU
+		{F1B0EC03-CA4C-4644-9D83-6436EC804B65}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
