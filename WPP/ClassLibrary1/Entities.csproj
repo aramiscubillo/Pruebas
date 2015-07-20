@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="WPPEntities\Entity.cs" />
     <Compile Include="WPPEntities\Usuario.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Mappings\UsuarioMapping.cs" />
   </ItemGroup>

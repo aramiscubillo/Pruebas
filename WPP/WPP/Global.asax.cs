@@ -3,6 +3,7 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -11,6 +12,8 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using WPP.Entities;
+
 
 namespace WPP
 {
@@ -23,7 +26,6 @@ namespace WPP
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             configureNHibernate();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
