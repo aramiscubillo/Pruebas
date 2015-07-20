@@ -1,5 +1,4 @@
 ﻿using Entities.Mappings;
-using Entities.WPPEntities;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
@@ -12,7 +11,6 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
-using WPP.Service.BaseServiceClasses;
 
 namespace WPP
 {
@@ -32,7 +30,6 @@ namespace WPP
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            createDB();
         }
 
 
@@ -91,23 +88,5 @@ namespace WPP
         }
 
 
-
-
-        private void createDB()
-        {
-             IServiceFactory<Usuario>serviceFactory = new ServiceFactory<Usuario>(MvcApplication.SessionFactory);
-            IService<Usuario> usuarioService = serviceFactory.GetUsuarioService();
-
-            Usuario usuario = new Usuario();
-
-            usuario.Id = new Guid();
-            usuario.CreateDate = DateTime.Now;
-            usuario.DateLastModified = DateTime.Now;
-            usuario.IsDeleted = false;
-            usuario.Version = 1;
-            usuario.Nombre = "Test 1";
-
-            usuarioService.Create(usuario);
-        }
     }
 }

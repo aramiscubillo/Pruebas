@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WPPEntities\Class1.cs" />
     <Compile Include="WPPEntities\Entity.cs" />
     <Compile Include="WPPEntities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

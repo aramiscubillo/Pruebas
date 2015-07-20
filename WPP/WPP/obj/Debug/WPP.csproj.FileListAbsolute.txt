@@ -1,3 +1,4 @@
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\obj\Debug\WPP.csprojResolveAssemblyReference.cache
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.dll.config
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.pdb
@@ -17,7 +18,10 @@ C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.Razor.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.Deployment.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.Razor.dll
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Service.dll
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Persistance.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\Entities.pdb
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Service.pdb
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\FluentNHibernate.pdb
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\FluentNHibernate.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\Iesi.Collections.xml
@@ -32,10 +36,6 @@ C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.Razor.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.Deployment.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.Razor.xml
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\obj\Debug\WPP.csprojResolveAssemblyReference.cache
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Persistance.pdb
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\obj\Debug\WPP.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\obj\Debug\WPP.pdb
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Service.dll
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Persistance.dll
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Service.pdb
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP\bin\WPP.Persistance.pdb

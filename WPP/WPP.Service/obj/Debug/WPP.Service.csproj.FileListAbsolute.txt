@@ -1,4 +1,3 @@
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\obj\Debug\WPP.Service.csprojResolveAssemblyReference.cache
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\WPP.Service.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\WPP.Service.pdb
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\Entities.dll
@@ -12,5 +11,6 @@ C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\FluentNHiber
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\FluentNHibernate.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\Iesi.Collections.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\bin\Debug\NHibernate.xml
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\obj\Debug\WPP.Service.csprojResolveAssemblyReference.cache
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\obj\Debug\WPP.Service.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Service\obj\Debug\WPP.Service.pdb

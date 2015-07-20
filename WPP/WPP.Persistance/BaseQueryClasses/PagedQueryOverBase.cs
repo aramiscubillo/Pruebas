@@ -18,7 +18,7 @@ namespace WPP.Persistance.BaseQueryClasses
         {
 
         }
-        public override PagedResult<T> Execute()
+        public  PagedResult<T> Execute()
         {
             var query = GetQuery();
             SetPaging(query);

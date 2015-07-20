@@ -1,4 +1,3 @@
-C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.csprojResolveAssemblyReference.cache
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\WPP.Persistance.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\WPP.Persistance.pdb
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Entities.dll
@@ -10,5 +9,6 @@ C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\FluentNH
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\FluentNHibernate.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Iesi.Collections.xml
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\NHibernate.xml
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.csprojResolveAssemblyReference.cache
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.dll
 C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.pdb
