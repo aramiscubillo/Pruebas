@@ -1,0 +1,14 @@
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\WPP.Persistance.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\WPP.Persistance.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Entities.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\FluentNHibernate.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Iesi.Collections.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\NHibernate.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Entities.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\FluentNHibernate.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\FluentNHibernate.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Iesi.Collections.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\NHibernate.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.csprojResolveAssemblyReference.cache
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.pdb

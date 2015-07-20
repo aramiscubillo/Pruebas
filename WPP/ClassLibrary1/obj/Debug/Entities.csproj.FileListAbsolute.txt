@@ -1,5 +1,11 @@
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\ClassLibrary1.dll
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\obj\Debug\ClassLibrary1.dll
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\Entities.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\Entities.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\FluentNHibernate.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\Iesi.Collections.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\NHibernate.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\FluentNHibernate.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\FluentNHibernate.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\Iesi.Collections.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\bin\Debug\NHibernate.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\obj\Debug\Entities.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\ClassLibrary1\obj\Debug\Entities.pdb
