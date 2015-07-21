@@ -10,7 +10,7 @@ using WPP.Service.BaseServiceClasses;
 
 namespace WPP.Service.ModuloContratos
 {
-    public class UsuarioService : IService<Usuario>
+    public class UsuarioService : IUsuarioService//IService<Usuario>
     {
         private IRepository<Usuario> repository;
         //private readonly IQueryManager queryManager;

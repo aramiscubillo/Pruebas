@@ -1,0 +1,16 @@
+﻿@model WPP.Model.CompaniaModel
+
+
+@using WPP.Service.ModuloContratos 
+@{
+    ViewBag.Title = "Compañía";
+}
+<fieldset>
+    <legend>Compañia</legend>
+
+    <div class="display-label">Nombre</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Compania)
+    </div>
+  
+</fieldset>

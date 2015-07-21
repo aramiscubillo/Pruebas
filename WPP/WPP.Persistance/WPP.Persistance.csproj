@@ -55,7 +55,9 @@
     <Compile Include="BaseRepositoryClasses\IRepository.cs" />
     <Compile Include="BaseRepositoryClasses\NHibernateBase.cs" />
     <Compile Include="BaseRepositoryClasses\Repository.cs" />
+    <Compile Include="Paged\IPagedCompania.cs" />
     <Compile Include="Paged\IPagedUsuario.cs" />
+    <Compile Include="Paged\PagedCompania.cs" />
     <Compile Include="Paged\PagedUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepoFactory\RepositoryFactory.cs" />

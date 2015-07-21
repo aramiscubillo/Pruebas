@@ -43,3 +43,14 @@ C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\System.Web.WebPages.Razor
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\WPP.Persistance.pdb
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\obj\Debug\WPP.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\obj\Debug\WPP.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Web.Common.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Web.Mvc.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\WebActivatorEx.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Web.Common.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Web.Mvc.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Conventions.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Interception.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Conventions.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Interception.xml

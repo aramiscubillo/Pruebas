@@ -12,8 +12,11 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
-using WPP.Entities;
-
+using Ninject;
+using Ninject.Web.Common;
+using WPP.Service.BaseServiceClasses;
+using Entities.WPPEntities;
+using WPP.Service.ModuloContratos;
 
 namespace WPP
 {
@@ -42,6 +45,7 @@ namespace WPP
                     .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
                         .AdoNetBatchSize(100))
                         .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
+                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CompaniaMapping>())
                  .ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
                  .Create(true, true))
                         .BuildConfiguration()
@@ -49,10 +53,22 @@ namespace WPP
                                {
                                    { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
                                 });
-            SessionFactory = nhConfig.BuildSessionFactory();
-          
+           // SessionFactory = nhConfig.BuildSessionFactory();
+
+            
+            //Ninject.IKernel kernel = new StandardKernel();
+
+            //kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
+            //kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
+
+
+            //kernel.Bind<ISessionFactory>().ToConstant(SessionFactory).InSingletonScope();
+
+            //kernel.Bind<IService<Usuario>>().To<UsuarioService>().InRequestScope();
+
         }
 
+           
         //private void configureNHibernate()
         //{
         //    var nhConfig = Fluently.Configure()

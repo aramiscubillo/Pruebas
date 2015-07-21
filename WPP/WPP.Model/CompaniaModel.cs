@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace WPP.Model
 {
-    public class BookViewModel
+    public class CompaniaModel
     {
-        public string Title { get; set; }
-        public string Author { get; set; }
+        public string Compania { get; set; }    
     }
-
 }

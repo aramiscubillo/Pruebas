@@ -50,10 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseServiceClasses\AutomappingConfiguration.cs" />
     <Compile Include="BaseServiceClasses\IService.cs" />
     <Compile Include="BaseServiceClasses\IServiceFactory.cs" />
     <Compile Include="BaseServiceClasses\Service.cs" />
     <Compile Include="BaseServiceClasses\ServiceFactory.cs" />
+    <Compile Include="ModuloContratos\CompaniaService.cs" />
+    <Compile Include="ModuloContratos\ICompaniaService.cs" />
+    <Compile Include="ModuloContratos\IUsuarioService.cs" />
     <Compile Include="ModuloContratos\UsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

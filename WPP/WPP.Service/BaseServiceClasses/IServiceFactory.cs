@@ -11,5 +11,6 @@ namespace WPP.Service.BaseServiceClasses
     {
         IService<T> ResolveService();
         IService<Usuario> GetUsuarioService();
+        IService<Compania> GetCompaniaService();
     }
 }

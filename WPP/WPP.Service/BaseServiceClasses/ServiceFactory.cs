@@ -47,5 +47,14 @@ namespace WPP.Service.BaseServiceClasses
 
             return service;
         }
+
+        public IService<Compania> GetCompaniaService()
+        {
+            //IQueryManager queryManager = new QueryManager(sessionFactory);
+            IRepository<Compania> repository = Factory.GetCompaniaRepository();
+            IService<Compania> service = new Service<Compania>(repository);
+
+            return service;
+        }
     }
 }

@@ -12,5 +12,6 @@ namespace WPP.Persistance.RepoFactory
     {
         IRepository<T> ResolveRepository();
         IRepository<Usuario> GetUsuarioRepository();
+        IRepository<Compania> GetCompaniaRepository();
     }
 }
