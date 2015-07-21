@@ -29,7 +29,7 @@ namespace WPP
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            configureNHibernate();
+          //  configureNHibernate();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

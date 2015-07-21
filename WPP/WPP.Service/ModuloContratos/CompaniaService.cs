@@ -22,12 +22,12 @@ namespace WPP.Service.ModuloContratos
 
         public Compania Get(Guid id)
         {
-            throw new NotImplementedException();
+            return repository.Get(id);
         }
 
         public Compania Get(IDictionary<string, object> criterias)
         {
-            throw new NotImplementedException();
+            return repository.Get(criterias);
         }
 
         public Compania Create(Compania entity)
@@ -38,42 +38,43 @@ namespace WPP.Service.ModuloContratos
 
         public Compania Update(Compania entity)
         {
-            throw new NotImplementedException();
+            repository.Update(entity);
+            return entity;
         }
 
         public void Delete(Compania entity)
         {
-            throw new NotImplementedException();
+            repository.Remove(entity);
         }
 
         public bool Contains(Compania item)
         {
-            throw new NotImplementedException();
+            return repository.Contains(item);
         }
 
         public bool Contains(Compania item, string property, object value)
         {
-            throw new NotImplementedException();
+            return repository.Contains(item, property, value);
         }
 
         public IEnumerable<Compania> ListAll()
         {
-            throw new NotImplementedException();
+            return repository.GetAll();
         }
 
         public IList<Compania> GetAll(IDictionary<string, object> criterias)
         {
-            throw new NotImplementedException();
+            return repository.GetAll(criterias);
         }
 
         public IList<Compania> GetAll(IDictionary<string, object> criterias, string property, DateTime startDate, DateTime endDate)
         {
-            throw new NotImplementedException();
+            return repository.GetAll(criterias, property, startDate, endDate);
         }
 
         public int Count()
         {
-            throw new NotImplementedException();
+            return repository.Count<Compania>();
         }
     }
 }
