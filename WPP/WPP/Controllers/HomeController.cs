@@ -15,6 +15,7 @@ namespace WPP.Controllers
         // GET: /Home/
         private IUsuarioService usuarioService;
         private ICompaniaService companiaService;
+        
 
         public HomeController(ICompaniaService service)
         {
@@ -24,8 +25,10 @@ namespace WPP.Controllers
 
         public ActionResult Index()
         {
-            companiaService.Create(new Compania { Nombre = "Compania 1", Cedula = "123" });
+            //companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456" });
            // var data = companiaService.Get(1);
+
+
 
             return View("Index");
         }

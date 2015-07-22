@@ -169,10 +169,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Entities.csproj">
-      <Project>{9aaa1ddf-1bce-4582-bb8f-dc300743e039}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WPP.Mapper\WPP.Mapper.csproj">
       <Project>{3771dd9e-3c36-443e-89af-8db7e2c150a6}</Project>
       <Name>WPP.Mapper</Name>

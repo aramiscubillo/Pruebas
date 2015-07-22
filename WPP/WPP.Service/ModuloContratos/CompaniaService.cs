@@ -1,24 +1,29 @@
-﻿using Entities.WPPEntities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPP.Entities.Base;
 using WPP.Persistance.BaseRepositoryClasses;
-using WPP.Persistance.RepoFactory;
 
 namespace WPP.Service.ModuloContratos
 {
-    public class CompaniaService: ICompaniaService
+    public class CompaniaService : ICompaniaService
     {
         private IRepository<Compania> repository;
+        //private ICompaniaRepository repository;
         //private IRepositoryFactory<Compania> repositoryFactory;
         //private readonly IQueryManager queryManager;
-     
-        public CompaniaService(IRepository<Compania> companiaRepository)
+
+        public CompaniaService(IRepository<Compania> _repository)
         {
-            repository = companiaRepository;
+            repository = _repository;
         }
+
+        //public CompaniaService(ICompaniaRepository companiaRepository)
+        //{
+        //    repository = companiaRepository;
+        //}
 
         public Compania Get(Guid id)
         {
