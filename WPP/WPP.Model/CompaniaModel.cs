@@ -8,6 +8,6 @@ namespace WPP.Model
 {
     public class CompaniaModel
     {
-        public string Compania { get; set; }    
+        public string Nombre { get; set; }
     }
 }

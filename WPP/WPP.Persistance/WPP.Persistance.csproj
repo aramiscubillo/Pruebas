@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -40,6 +43,15 @@
     </Reference>
     <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernateOracleManagedDriver">
+      <HintPath>..\packages\NHibernate.OracleManaged.1.0.1\lib\NHibernateOracleManagedDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\packages\Oracle.DataAccess.x86.2.112.1.0\lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\packages\odp.net.managed.121.1.1\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -71,6 +84,17 @@
       <Project>{b4f21b53-c0c2-4010-be42-faf1ae07272b}</Project>
       <Name>WPP.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ORAOLEDBLib">
+      <Guid>{0BB9AFD1-51A1-11D2-BB7D-00C04FA30080}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

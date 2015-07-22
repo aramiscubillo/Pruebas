@@ -1,0 +1,11 @@
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\WPP.Entities.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\WPP.Entities.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\FluentNHibernate.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\Iesi.Collections.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\NHibernate.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\FluentNHibernate.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\FluentNHibernate.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\Iesi.Collections.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\bin\Debug\NHibernate.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\obj\Debug\WPP.Entities.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Entities\obj\Debug\WPP.Entities.pdb

@@ -197,13 +197,21 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WPP.Entities\WPP.Entities.csproj">
+      <Project>{b4f21b53-c0c2-4010-be42-faf1ae07272b}</Project>
+      <Name>WPP.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WPP.Mapper\WPP.Mapper.csproj">
-      <Project>{3771dd9e-3c36-443e-89af-8db7e2c150a6}</Project>
+      <Project>{28204d8f-30c6-49dc-aa46-140d1ec1c3fb}</Project>
       <Name>WPP.Mapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\WPP.Model\WPP.Model.csproj">
-      <Project>{f1b0ec03-ca4c-4644-9d83-6436ec804b65}</Project>
+      <Project>{952d5a34-ee58-426a-9487-d23e9673d146}</Project>
       <Name>WPP.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPP.Persistance\WPP.Persistance.csproj">
+      <Project>{45e21f55-d53e-44f1-ab6c-6613bcc5d943}</Project>
+      <Name>WPP.Persistance</Name>
     </ProjectReference>
     <ProjectReference Include="..\WPP.Service\WPP.Service.csproj">
       <Project>{b414a3f5-2d64-4843-8cea-4251aa2e87cb}</Project>
@@ -211,16 +219,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Entities.csproj">
-      <Project>{9aaa1ddf-1bce-4582-bb8f-dc300743e039}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

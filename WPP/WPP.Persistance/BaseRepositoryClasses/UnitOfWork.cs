@@ -1,4 +1,5 @@
-﻿using FluentNHibernate.Cfg;
+﻿
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
@@ -21,18 +22,22 @@ namespace WPP.Service.BaseServiceClasses
         static UnitOfWork()
         {
             var nhConfig = Fluently.Configure()
-                    .Database(MsSqlConfiguration.MsSql2008
+                    .Database(OracleDataClientConfiguration.Oracle10// MsSqlConfiguration.MsSql2008
                     .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
-                        .AdoNetBatchSize(100))
+                    .ShowSql())
+                      //  .AdoNetBatchSize(100))
+                      .CurrentSessionContext("thread_static")
                         .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
-                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CompaniaMapping>())
-                 .ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
-                 .Create(true, true))
-                        .BuildConfiguration()
-                        .AddProperties(new Dictionary<string, string>
-                               {
-                                   { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
-                                });
+                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CompaniaMapping>());
+                 //.ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
+                 //.Create(true, true))
+                 //       .BuildConfiguration()
+                 //       .AddProperties(new Dictionary<string, string>
+                 //              {
+                 //                  { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
+                 //               });
+             
+
 
             _sessionFactory = nhConfig.BuildSessionFactory();
         }

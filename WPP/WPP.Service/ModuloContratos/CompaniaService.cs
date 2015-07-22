@@ -10,6 +10,7 @@ namespace WPP.Service.ModuloContratos
 {
     public class CompaniaService : ICompaniaService
     {
+
         private IRepository<Compania> repository;
         //private ICompaniaRepository repository;
         //private IRepositoryFactory<Compania> repositoryFactory;
@@ -19,6 +20,7 @@ namespace WPP.Service.ModuloContratos
         {
             repository = _repository;
         }
+
 
         //public CompaniaService(ICompaniaRepository companiaRepository)
         //{
