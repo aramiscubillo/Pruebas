@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WPP.Model;
 
+
 namespace WPP.Mapper
 {
     public class CompaniaMapper
@@ -15,7 +16,7 @@ namespace WPP.Mapper
         {
             AutoMapper.Mapper.CreateMap<Compania, CompaniaModel>();
             CompaniaModel companiaModelo = AutoMapper.Mapper.Map<CompaniaModel>(compania);
-            AutoMapper.Mapper.AssertConfigurationIsValid();
+            //AutoMapper.Mapper.AssertConfigurationIsValid();
             return companiaModelo;
         }
 
@@ -24,8 +25,8 @@ namespace WPP.Mapper
         {
             AutoMapper.Mapper.CreateMap<CompaniaModel, Compania>();
             Compania compania = AutoMapper.Mapper.Map<Compania>(companiaModel);
-            AutoMapper.Mapper.AssertConfigurationIsValid();
+       //     AutoMapper.Mapper.AssertConfigurationIsValid();
             return compania;
-        } 
+        }
     }
 }

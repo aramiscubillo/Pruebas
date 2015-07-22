@@ -6,6 +6,8 @@ using System.Web;
 using System.Web.Mvc;
 using WPP.Service.BaseServiceClasses;
 using WPP.Service.ModuloContratos;
+using WPP.Mapper;
+using WPP.Model;
 
 namespace WPP.Controllers
 {
@@ -24,12 +26,11 @@ namespace WPP.Controllers
 
         public ActionResult Index()
         {
-            companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456" });
-           // var data = companiaService.Get(1);
+            CompaniaMapper companiaMapper = new CompaniaMapper(); 
+           var compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456" });
+           CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
 
-
-
-            return View("Index");
+           return View("Index", companiaModel);
         }
 
     }

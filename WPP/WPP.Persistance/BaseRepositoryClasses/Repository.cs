@@ -11,7 +11,7 @@ using WPP.Service.BaseServiceClasses;
 
 namespace WPP.Persistance.BaseRepositoryClasses
 {
-    class Repository<T> :  IRepository<T> where T : Entity
+    public class Repository<T> :  IRepository<T> where T : Entity
     {
         private UnitOfWork _unitOfWork;
 

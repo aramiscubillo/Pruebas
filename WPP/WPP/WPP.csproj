@@ -174,11 +174,11 @@
       <Name>Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\WPP.Mapper\WPP.Mapper.csproj">
-      <Project>{3771dd9e-3c36-443e-89af-8db7e2c150a6}</Project>
+      <Project>{28204d8f-30c6-49dc-aa46-140d1ec1c3fb}</Project>
       <Name>WPP.Mapper</Name>
     </ProjectReference>
     <ProjectReference Include="..\WPP.Model\WPP.Model.csproj">
-      <Project>{f1b0ec03-ca4c-4644-9d83-6436ec804b65}</Project>
+      <Project>{952d5a34-ee58-426a-9487-d23e9673d146}</Project>
       <Name>WPP.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\WPP.Service\WPP.Service.csproj">
@@ -197,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

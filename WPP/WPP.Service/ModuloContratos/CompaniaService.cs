@@ -11,20 +11,20 @@ namespace WPP.Service.ModuloContratos
 {
     public class CompaniaService: ICompaniaService
     {
-       // IRepository<Compania> repository;
-       private ICompaniaRepository repository;
+        IRepository<Compania> repository;
+      // private ICompaniaRepository repository;
         //private IRepositoryFactory<Compania> repositoryFactory;
         //private readonly IQueryManager queryManager;
 
-        //public CompaniaService(IRepository<Compania> companiaRepository)
+       public CompaniaService(IRepository<Compania> companiaRepository)
+       {
+           repository = companiaRepository;
+       }
+
+        //public CompaniaService(ICompaniaRepository companiaRepository)
         //{
         //    repository = companiaRepository;
         //}
-
-        public CompaniaService(ICompaniaRepository companiaRepository)
-        {
-            repository = companiaRepository;
-        }
 
         public Compania Get(Guid id)
         {

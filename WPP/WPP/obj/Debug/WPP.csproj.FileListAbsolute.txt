@@ -54,3 +54,7 @@ C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Conven
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Interception.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Conventions.xml
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\Ninject.Extensions.Interception.xml
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\WPP.Mapper.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\WPP.Model.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\WPP.Mapper.pdb
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin\WPP.Model.pdb
