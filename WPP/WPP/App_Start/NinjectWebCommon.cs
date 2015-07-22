@@ -10,21 +10,10 @@ namespace WPP.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using Ninject.Extensions.Conventions;
-    using Ninject.Extensions.Interception;
-    using NHibernate;
-    using WPP.Service.BaseServiceClasses;
-    using WPP.Service.ModuloContratos;
-    using Entities;
-    using FluentNHibernate.Cfg;
-    using FluentNHibernate.Cfg.Db;
-    using System.Collections.Generic;
-
 
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
-        public static ISessionFactory SessionFactory;
 
         /// <summary>
         /// Starts the application
@@ -35,10 +24,6 @@ namespace WPP.App_Start
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             bootstrapper.Initialize(CreateKernel);
         }
-
-
-
-
         
         /// <summary>
         /// Stops the application.
@@ -76,11 +61,6 @@ namespace WPP.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
-          //  kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
-            kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().Excluding<UnitOfWork>().BindDefaultInterface());
-            //kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
-
         }        
     }
 }
