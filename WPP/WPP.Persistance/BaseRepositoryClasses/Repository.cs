@@ -1,5 +1,4 @@
-﻿using Entities.WPPEntities;
-using NHibernate;
+﻿using NHibernate;
 using NHibernate.Criterion;
 using System;
 using System.Collections;
@@ -7,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPP.Entities.Base;
 using WPP.Service.BaseServiceClasses;
 
 namespace WPP.Persistance.BaseRepositoryClasses

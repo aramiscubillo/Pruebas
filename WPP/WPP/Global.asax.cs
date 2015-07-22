@@ -1,4 +1,4 @@
-﻿using Entities.Mappings;
+﻿
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
@@ -15,8 +15,8 @@ using System.Web.Routing;
 using Ninject;
 using Ninject.Web.Common;
 using WPP.Service.BaseServiceClasses;
-using Entities.WPPEntities;
 using WPP.Service.ModuloContratos;
+using WPP.Entities.Mappings;
 
 namespace WPP
 {

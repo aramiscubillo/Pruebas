@@ -52,9 +52,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Entities.csproj">
-      <Project>{9aaa1ddf-1bce-4582-bb8f-dc300743e039}</Project>
-      <Name>Entities</Name>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WPP.Entities\WPP.Entities.csproj">
+      <Project>{b4f21b53-c0c2-4010-be42-faf1ae07272b}</Project>
+      <Name>WPP.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\WPP.Model\WPP.Model.csproj">
       <Project>{952d5a34-ee58-426a-9487-d23e9673d146}</Project>

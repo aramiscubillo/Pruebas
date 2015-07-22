@@ -1,3 +1,10 @@
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\bin\Debug\WPP.Test.dll
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\bin\Debug\WPP.Test.pdb
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\bin\Debug\FakeItEasy.dll
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\bin\Debug\FakeItEasy.xml
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\obj\Debug\WPP.Test.csprojResolveAssemblyReference.cache
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\obj\Debug\WPP.Test.dll
+C:\Users\aramis.cubillo\Documents\Pruebas\WPP\WPP.Test\obj\Debug\WPP.Test.pdb
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\bin\Debug\WPP.Test.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\bin\Debug\WPP.Test.pdb
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\bin\Debug\FakeItEasy.dll
@@ -6,4 +13,3 @@ C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\bin\Debug\FakeItEasy.xml
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\bin\Debug\nunit.framework.xml
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\obj\Debug\WPP.Test.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\obj\Debug\WPP.Test.pdb
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Test\obj\Debug\WPP.Test.csprojResolveAssemblyReference.cache

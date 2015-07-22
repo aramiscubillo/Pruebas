@@ -1,10 +1,11 @@
-﻿using Entities.WPPEntities;
+﻿
 using NHibernate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPP.Entities.Base;
 using WPP.Persistance.BaseQueryClasses;
 
 namespace WPP.Persistance.Paged
