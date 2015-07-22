@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="BaseQueryClasses\PagedQueryOverBase.cs" />
     <Compile Include="BaseQueryClasses\PagedResult.cs" />
+    <Compile Include="BaseRepositoryClasses\CompaniaRepository.cs" />
     <Compile Include="BaseRepositoryClasses\IRepository.cs" />
+    <Compile Include="BaseRepositoryClasses\IRepositoryCompania.cs" />
     <Compile Include="BaseRepositoryClasses\NHibernateBase.cs" />
     <Compile Include="BaseRepositoryClasses\Repository.cs" />
     <Compile Include="Paged\IPagedCompania.cs" />

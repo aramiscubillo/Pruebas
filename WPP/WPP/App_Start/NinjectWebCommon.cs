@@ -24,7 +24,6 @@ namespace WPP.App_Start
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
-        public static ISessionFactory SessionFactory;
 
         /// <summary>
         /// Starts the application
@@ -37,9 +36,6 @@ namespace WPP.App_Start
         }
 
 
-
-
-        
         /// <summary>
         /// Stops the application.
         /// </summary>
@@ -79,8 +75,8 @@ namespace WPP.App_Start
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
           //  kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
             kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().Excluding<UnitOfWork>().BindDefaultInterface());
-            //kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
 
+            //kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
         }        
     }
 }
