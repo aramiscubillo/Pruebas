@@ -2,6 +2,7 @@
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using NHibernate.Driver;
 using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
@@ -21,25 +22,35 @@ namespace WPP.Service.BaseServiceClasses
 
         static UnitOfWork()
         {
-            var nhConfig = Fluently.Configure()
-                    .Database(OracleDataClientConfiguration.Oracle10// MsSqlConfiguration.MsSql2008
-                    .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
-                    .ShowSql())
-                      //  .AdoNetBatchSize(100))
-                      .CurrentSessionContext("thread_static")
-                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
-                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CompaniaMapping>());
-                 //.ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
-                 //.Create(true, true))
-                 //       .BuildConfiguration()
-                 //       .AddProperties(new Dictionary<string, string>
-                 //              {
-                 //                  { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
-                 //               });
-             
+            try
+            {
+                //var nhConfig = Fluently.Configure()
+                //        .Database(OracleDataClientConfiguration.Oracle10// MsSqlConfiguration.MsSql2008
+                //        .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
+                //        .Driver<OracleDataClientDriver>()
+                //        .ShowSql())
+                //          //  .AdoNetBatchSize(100))
+                //          .CurrentSessionContext("thread_static")
+                //            .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
+                //            .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CompaniaMapping>());
 
+                var dbConfig = OracleDataClientConfiguration.Oracle10
+              .ConnectionString(c => c.FromConnectionStringWithKey("db"))
+              .Driver<OracleDataClientDriver>()
+              .ShowSql();
 
-            _sessionFactory = nhConfig.BuildSessionFactory();
+                _sessionFactory = Fluently.Configure()
+                  .Database(dbConfig)
+                  .Mappings(m => m.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
+                  .Mappings(m => m.FluentMappings.AddFromAssemblyOf<CompaniaMapping>())
+                  .BuildSessionFactory();
+            }
+            catch(Exception ex)
+            {
+                
+            }
+
+          //  _sessionFactory = nhConfig.BuildSessionFactory();
         }
 
         public UnitOfWork()

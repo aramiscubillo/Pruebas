@@ -12,6 +12,7 @@ namespace WPP.Controllers
     {
         [Inject]
         public IUnitOfWork UnitOfWork { get; set; }
+        public readonly log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {

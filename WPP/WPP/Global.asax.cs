@@ -17,6 +17,7 @@ using Ninject.Web.Common;
 using WPP.Service.BaseServiceClasses;
 using WPP.Service.ModuloContratos;
 using WPP.Entities.Mappings;
+using System.IO;
 
 namespace WPP
 {
@@ -35,6 +36,7 @@ namespace WPP
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
+            log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
         }
 
 

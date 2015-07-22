@@ -21,7 +21,15 @@ namespace WPP.Controllers
 
         public HomeController(ICompaniaService service)
         {
-            this.companiaService = service;
+            try
+            {
+                this.companiaService = service;
+                this.logger.Debug("prueba");
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex.Message);
+            }
         }
 
 

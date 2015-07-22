@@ -1,0 +1,184 @@
+INFO  2015-07-22 15:36:43,098   291ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-22 15:36:43,138   331ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-22 15:36:43,139   332ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-22 15:36:43,140   333ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-22 15:36:43,270   463ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Compania`"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-22 15:36:43,787   980ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:36:43,833  1026ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-22 15:36:43,856  1049ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-22 15:36:43,868  1061ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-22 15:36:43,869  1062ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-22 15:36:43,874  1067ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Usuario`"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-22 15:36:43,875  1068ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:36:43,876  1069ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-22 15:36:43,876  1069ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-22 15:36:43,877  1070ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-22 15:36:43,879  1072ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-22 15:36:43,880  1073ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-22 15:36:43,880  1073ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-22 15:36:43,880  1073ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-22 15:36:43,882  1075ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-22 15:36:43,896  1089ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:36:43,900  1093ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:36:43,962  1155ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-22 15:36:43,964  1157ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-22 15:36:43,966  1159ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-22 15:36:43,968  1161ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+ERROR 2015-07-22 15:36:44,022  1215ms ReflectHelper          lambda_method      - Could not load type Oracle.DataAccess.Client.OracleConnection, Oracle.DataAccess.
+System.IO.FileNotFoundException: Could not load file or assembly 'Oracle.DataAccess' or one of its dependencies. The system cannot find the file specified.
+File name: 'Oracle.DataAccess'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: DisplayName = Oracle.DataAccess
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: Oracle.DataAccess | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///C:/Users/dayanna.barboza/Documents/Pruebas/WPP/WPP/
+LOG: Initial PrivatePath = C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin
+Calling assembly : NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\web.config
+LOG: Using host configuration file: C:\Users\dayanna.barboza\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+ERROR 2015-07-22 15:36:44,058  1251ms ReflectHelper          lambda_method      - Could not load type Oracle.DataAccess.Client.OracleCommand, Oracle.DataAccess.
+System.IO.FileNotFoundException: Could not load file or assembly 'Oracle.DataAccess' or one of its dependencies. The system cannot find the file specified.
+File name: 'Oracle.DataAccess'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: DisplayName = Oracle.DataAccess
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: Oracle.DataAccess | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///C:/Users/dayanna.barboza/Documents/Pruebas/WPP/WPP/
+LOG: Initial PrivatePath = C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin
+Calling assembly : NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\web.config
+LOG: Using host configuration file: C:\Users\dayanna.barboza\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+INFO  2015-07-22 15:40:15,991   196ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-22 15:40:16,081   286ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-22 15:40:16,083   288ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-22 15:40:16,087   292ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-22 15:40:16,341   546ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Compania`"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-22 15:40:16,888  1093ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:40:16,930  1135ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-22 15:40:16,953  1158ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-22 15:40:16,964  1169ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-22 15:40:16,965  1170ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-22 15:40:16,970  1175ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="`Usuario`"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-22 15:40:16,971  1176ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:40:16,972  1177ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-22 15:40:16,973  1178ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-22 15:40:16,973  1178ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-22 15:40:16,975  1180ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-22 15:40:16,976  1181ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-22 15:40:16,976  1181ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-22 15:40:16,977  1182ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-22 15:40:16,978  1183ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-22 15:40:16,990  1195ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:40:16,994  1199ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-22 15:40:17,037  1242ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-22 15:40:17,038  1243ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-22 15:40:17,039  1244ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-22 15:40:17,040  1245ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+ERROR 2015-07-22 15:40:17,079  1284ms ReflectHelper          lambda_method      - Could not load type Oracle.DataAccess.Client.OracleConnection, Oracle.DataAccess.
+System.IO.FileNotFoundException: Could not load file or assembly 'Oracle.DataAccess' or one of its dependencies. The system cannot find the file specified.
+File name: 'Oracle.DataAccess'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: DisplayName = Oracle.DataAccess
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: Oracle.DataAccess | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///C:/Users/dayanna.barboza/Documents/Pruebas/WPP/WPP/
+LOG: Initial PrivatePath = C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin
+Calling assembly : NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\web.config
+LOG: Using host configuration file: C:\Users\dayanna.barboza\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
+ERROR 2015-07-22 15:40:17,108  1313ms ReflectHelper          lambda_method      - Could not load type Oracle.DataAccess.Client.OracleCommand, Oracle.DataAccess.
+System.IO.FileNotFoundException: Could not load file or assembly 'Oracle.DataAccess' or one of its dependencies. The system cannot find the file specified.
+File name: 'Oracle.DataAccess'
+   at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean forIntrospection)
+   at System.Reflection.RuntimeAssembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NHibernate.Util.ReflectHelper.TypeFromAssembly(AssemblyQualifiedTypeName name, Boolean throwOnError)
+
+=== Pre-bind state information ===
+LOG: DisplayName = Oracle.DataAccess
+ (Partial)
+WRN: Partial binding information was supplied for an assembly:
+WRN: Assembly Name: Oracle.DataAccess | Domain ID: 2
+WRN: A partial bind occurs when only part of the assembly display name is provided.
+WRN: This might result in the binder loading an incorrect assembly.
+WRN: It is recommended to provide a fully specified textual identity for the assembly,
+WRN: that consists of the simple name, version, culture, and public key token.
+WRN: See whitepaper http://go.microsoft.com/fwlink/?LinkId=109270 for more information and common solutions to this issue.
+LOG: Appbase = file:///C:/Users/dayanna.barboza/Documents/Pruebas/WPP/WPP/
+LOG: Initial PrivatePath = C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\bin
+Calling assembly : NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4.
+===
+LOG: This bind starts in default load context.
+LOG: Using application configuration file: C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP\web.config
+LOG: Using host configuration file: C:\Users\dayanna.barboza\Documents\IISExpress\config\aspnet.config
+LOG: Using machine configuration file from C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Policy not being applied to reference at this time (private, custom, partial, or location-based assembly bind).
+LOG: The same bind was seen before, and was failed with hr = 0x80070002.
+
