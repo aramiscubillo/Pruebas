@@ -54,6 +54,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WPP.Entities\WPP.Entities.csproj">
+      <Project>{b4f21b53-c0c2-4010-be42-faf1ae07272b}</Project>
+      <Name>WPP.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WPP.Model\WPP.Model.csproj">
       <Project>{f1b0ec03-ca4c-4644-9d83-6436ec804b65}</Project>
       <Name>WPP.Model</Name>

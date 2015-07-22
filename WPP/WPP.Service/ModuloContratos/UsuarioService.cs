@@ -1,10 +1,9 @@
-﻿
-using Entities.WPPEntities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPP.Entities.Base;
 using WPP.Persistance.BaseRepositoryClasses;
 using WPP.Service.BaseServiceClasses;
 

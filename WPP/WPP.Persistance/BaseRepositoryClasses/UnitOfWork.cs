@@ -1,5 +1,4 @@
-﻿using Entities.Mappings;
-using FluentNHibernate.Cfg;
+﻿using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
@@ -8,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WPP.Entities.Mappings;
 
 namespace WPP.Service.BaseServiceClasses
 {

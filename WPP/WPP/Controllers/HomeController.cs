@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WPP.Security;
 using WPP.Service.BaseServiceClasses;
 using WPP.Service.ModuloContratos;
 
@@ -22,7 +23,13 @@ namespace WPP.Controllers
             this.companiaService = service;
         }
 
+        [AccessDeniedAuthorizeAttribute(Roles = "SuperUser")]
+        public ActionResult TestMethod()
+        {
+            return View();
+        }
 
+        [AccessDeniedAuthorizeAttribute(Roles = "Admin")]
         public ActionResult Index()
         {
             //companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456" });
