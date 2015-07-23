@@ -36,7 +36,8 @@ namespace WPP.Service.BaseServiceClasses
 
                 var dbConfig = OracleDataClientConfiguration.Oracle10
               .ConnectionString(c => c.FromConnectionStringWithKey("db"))
-              .Driver<OracleDataClientDriver>()
+              .Driver<NHibernate.Driver.OracleClientDriver>()
+              .DefaultSchema("WPP")
               .ShowSql();
 
                 _sessionFactory = Fluently.Configure()
