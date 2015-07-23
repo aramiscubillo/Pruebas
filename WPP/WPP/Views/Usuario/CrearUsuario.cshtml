@@ -1,0 +1,45 @@
+﻿@model WPP.Models.ModuloContratos.UsuarioModel
+
+@{
+    ViewBag.Title = "Crear Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear Usuario</h2>
+
+@using (Html.BeginForm("Crear", "Usuario", FormMethod.Post, new { id = "frmCrearUsuario" , @class="form-horizontal"})) 
+{ 
+     @Html.ValidationSummary(true)
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        @Html.TextBoxFor(m => m.Nombre, new { @Class = "form-control", id = "Nombre" })
+    </div>
+    <div class="form-group">
+        <label for="nombre">Apellido</label>
+        @Html.TextBoxFor(m => m.Apellido, new { @Class = "form-control", id = "Apellido" })
+    </div>
+    <div class="form-group">
+        <label for="nombre">Fecha de nacimiento</label>
+        @Html.TextBoxFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
+    </div>
+     <div class="form-group">
+        <label for="nombre">Email</label>
+        @Html.TextBoxFor(m => m.Email, new { @Class = "form-control", id = "Email" })
+    </div>
+     <div class="form-group">
+        <label for="nombre">Fecha de nacimiento</label>
+        @Html.TextBoxFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
+    </div>
+     <div class="form-group">
+        <label for="nombre">Contraseña</label>
+        @Html.PasswordFor(m => m.Password, new { @Class = "form-control", id = "Password" })
+    </div>
+     <div class="form-group">
+        <label for="nombre">Confirmar Contraseña</label>
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @Class = "form-control", id = "ConfirmPassword" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    @Html.ActionLink("Cancelar", "Index", "Usuario", new { @Class = "btn btn-primary" }, null)
+
+}

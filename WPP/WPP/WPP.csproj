@@ -140,11 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="Models\ModuloContratos\UsuarioModel.cs" />
     <Compile Include="Security\AccessDeniedAuthorizeAttribute.cs" />
     <Compile Include="Security\WPPRolesProvider.cs" />
     <Compile Include="App_Start\Security.cs" />
     <Compile Include="Security\WPPMembershipProvider.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -185,10 +186,13 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
-    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Shared\_LogInLayout.cshtml" />
     <Content Include="Views\Home\TestMethod.cshtml" />
-    <Content Include="Views\Account\AccessDenied.cshtml" />
+    <Content Include="Views\Usuario\AccessDenied.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\CrearUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5,10 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using WPP.Models;
+using WPP.Security;
 
 namespace WPP.Controllers
 {
-    public class AccountController : Controller
+    public class UsuarioController : Controller
     {
 
         [HttpGet]
@@ -17,6 +18,16 @@ namespace WPP.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        [AccessDeniedAuthorizeAttribute(Roles = "Admin")]
+        public ActionResult Index()
+        {
+                return View();
+        }
+
+
+
 
         [HttpPost]
         [AllowAnonymous]
@@ -33,6 +44,7 @@ namespace WPP.Controllers
                 return View(login);
             }
         }
+
 
         public ActionResult AccessDenied()
         {
