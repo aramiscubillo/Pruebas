@@ -13,6 +13,7 @@ namespace WPP.Entities.Mappings
     {
         public UsuarioMapping()
         {
+            Table("Usuario"); 
             Id(c => c.Id);
             Map(c => c.Nombre);
         }

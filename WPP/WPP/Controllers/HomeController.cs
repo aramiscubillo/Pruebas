@@ -19,11 +19,24 @@ namespace WPP.Controllers
         private ICompaniaService companiaService;
         
 
-        public HomeController(ICompaniaService service)
+        //public HomeController(ICompaniaService service)
+        //{
+        //    try
+        //    {
+        //        this.companiaService = service;
+        //        this.logger.Debug("prueba");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        logger.Error(ex.Message);
+        //    }
+        //}
+
+        public HomeController(IUsuarioService service)
         {
             try
             {
-                this.companiaService = service;
+                this.usuarioService = service;
                 this.logger.Debug("prueba");
             }
             catch (Exception ex)
@@ -33,11 +46,14 @@ namespace WPP.Controllers
         }
 
 
+
         public ActionResult Index()
         {
-          CompaniaMapper companiaMapper = new CompaniaMapper();
-          Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
+        //  CompaniaMapper companiaMapper = new CompaniaMapper();
+        //  Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
           // CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
+
+            usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
 
 
            return View("Index");//, companiaModel

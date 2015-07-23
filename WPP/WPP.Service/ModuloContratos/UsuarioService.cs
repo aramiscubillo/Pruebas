@@ -13,61 +13,76 @@ namespace WPP.Service.ModuloContratos
     public class UsuarioService : IUsuarioService//IService<Usuario>
     {
         private IRepository<Usuario> repository;
+        //private ICompaniaRepository repository;
+        //private IRepositoryFactory<Compania> repositoryFactory;
         //private readonly IQueryManager queryManager;
 
-        public Usuario Get(Guid id)
+          public UsuarioService(IRepository<Usuario> _repository)
         {
-            throw new NotImplementedException();
+            repository = _repository;
         }
 
-        public Usuario Get(IDictionary<string, object> criterias)
+
+        //public CompaniaService(ICompaniaRepository companiaRepository)
+        //{
+        //    repository = companiaRepository;
+        //}
+
+          public Usuario Get(Guid id)
         {
-            throw new NotImplementedException();
+            return repository.Get(id);
         }
 
-        public Usuario Create(Usuario entity)
+          public Usuario Get(IDictionary<string, object> criterias)
         {
-            throw new NotImplementedException();
+            return repository.Get(criterias);
         }
 
-        public Usuario Update(Usuario entity)
+          public Usuario Create(Usuario entity)
         {
-            throw new NotImplementedException();
+            repository.Add(entity);
+            return entity;
         }
 
-        public void Delete(Usuario entity)
+          public Usuario Update(Usuario entity)
         {
-            throw new NotImplementedException();
+            repository.Update(entity);
+            return entity;
         }
 
-        public bool Contains(Usuario item)
+          public void Delete(Usuario entity)
         {
-            throw new NotImplementedException();
+            repository.Remove(entity);
         }
 
-        public bool Contains(Usuario item, string property, object value)
+          public bool Contains(Usuario item)
         {
-            throw new NotImplementedException();
+            return repository.Contains(item);
         }
 
-        public IEnumerable<Usuario> ListAll()
+          public bool Contains(Usuario item, string property, object value)
         {
-            throw new NotImplementedException();
+            return repository.Contains(item, property, value);
         }
 
-        public IList<Usuario> GetAll(IDictionary<string, object> criterias)
+          public IEnumerable<Usuario> ListAll()
         {
-            throw new NotImplementedException();
+            return repository.GetAll();
         }
 
-        public IList<Usuario> GetAll(IDictionary<string, object> criterias, string property, DateTime startDate, DateTime endDate)
+          public IList<Usuario> GetAll(IDictionary<string, object> criterias)
         {
-            throw new NotImplementedException();
+            return repository.GetAll(criterias);
+        }
+
+          public IList<Usuario> GetAll(IDictionary<string, object> criterias, string property, DateTime startDate, DateTime endDate)
+        {
+            return repository.GetAll(criterias, property, startDate, endDate);
         }
 
         public int Count()
         {
-            throw new NotImplementedException();
+            return repository.Count<Usuario>();
         }
     }
 }
