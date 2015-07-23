@@ -48,12 +48,15 @@
     <Reference Include="NHibernateOracleManagedDriver">
       <HintPath>..\packages\NHibernate.OracleManaged.1.0.1\lib\NHibernateOracleManagedDriver.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.DataAccess">
-      <HintPath>..\packages\Oracle.DataAccess.x86.2.112.1.0\lib\Oracle.DataAccess.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.022\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.ManagedDataAccess">
-      <HintPath>..\packages\odp.net.managed.121.1.1\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    <Reference Include="SD.LLBLGen.Pro.DQE.OracleMS">
+      <HintPath>..\packages\SD.LLBLGen.Pro.DQE.OracleMS.4.2.20150721\lib\net35\SD.LLBLGen.Pro.DQE.OracleMS.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses">
+      <HintPath>..\packages\SD.LLBLGen.Pro.ORMSupportClasses.4.2.20150210\lib\net45\SD.LLBLGen.Pro.ORMSupportClasses.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -79,7 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WPP.Entities\WPP.Entities.csproj">

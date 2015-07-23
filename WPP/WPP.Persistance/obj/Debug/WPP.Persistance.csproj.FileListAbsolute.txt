@@ -26,7 +26,6 @@ C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Iesi.Co
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\NHibernate.xml
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Persistance.pdb
-C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Oracle.DataAccess.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Castle.Core.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Castle.Core.xml
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\Interop.ORAOLEDBLib.dll
@@ -34,3 +33,6 @@ C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\obj\Debug\WPP.Per
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\WPP.Persistance.dll.config
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\NHibernateOracleManagedDriver.dll
 C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\SD.LLBLGen.Pro.DQE.OracleMS.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.dll
+C:\Users\dayanna.barboza\Documents\Pruebas\WPP\WPP.Persistance\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.xml
