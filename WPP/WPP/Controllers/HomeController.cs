@@ -36,11 +36,11 @@ namespace WPP.Controllers
         public ActionResult Index()
         {
           CompaniaMapper companiaMapper = new CompaniaMapper();
-          Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456" });
-           CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
+          Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
+          // CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
 
 
-           return View("Index", companiaModel);
+           return View("Index");//, companiaModel
         }
 
     }

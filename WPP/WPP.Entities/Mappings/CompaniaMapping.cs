@@ -12,6 +12,7 @@ namespace WPP.Entities.Mappings
     {
         public CompaniaMapping()
         {
+            Table("Compania");
             Id(c => c.Id);
             Map(c => c.Nombre);
             Map(c => c.Cedula);

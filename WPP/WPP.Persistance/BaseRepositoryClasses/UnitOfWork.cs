@@ -42,7 +42,7 @@ namespace WPP.Service.BaseServiceClasses
 
                 _sessionFactory = Fluently.Configure()
                   .Database(dbConfig)
-                  .Mappings(m => m.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
+                  //.Mappings(m => m.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
                   .Mappings(m => m.FluentMappings.AddFromAssemblyOf<CompaniaMapping>())
                   .BuildSessionFactory();
             }
