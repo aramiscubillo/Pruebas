@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WPP.Security;
 using WPP.Service.BaseServiceClasses;
 using WPP.Service.ModuloContratos;
 using WPP.Mapper;
@@ -45,7 +46,14 @@ namespace WPP.Controllers
             }
         }
 
+        [AccessDeniedAuthorizeAttribute(Roles = "SuperUser")]
+        public ActionResult TestMethod()
+        {
+            return View();
+        }
 
+
+        [AccessDeniedAuthorizeAttribute(Roles = "Admin")]
 
         public ActionResult Index()
         {

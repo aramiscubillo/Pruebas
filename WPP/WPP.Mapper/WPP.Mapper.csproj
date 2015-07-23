@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{28204D8F-30C6-49DC-AA46-140D1EC1C3FB}</ProjectGuid>
+    <ProjectGuid>{3771DD9E-3C36-443E-89AF-8DB7E2C150A6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WPP.Mapper</RootNamespace>
