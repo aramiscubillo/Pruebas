@@ -11,8 +11,6 @@ namespace WPP.Security
 {
     public class WPPMembershipProvider : IWPPMembershipProvider
     {
-
-       
          private IUsuarioService usuarioService;
 
          
