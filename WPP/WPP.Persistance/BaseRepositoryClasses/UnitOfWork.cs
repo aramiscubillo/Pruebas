@@ -79,6 +79,7 @@ namespace WPP.Service.BaseServiceClasses
 
         private void CreateObjects()
         {
+            
             Usuario superUsuario = new Usuario();
             superUsuario.IsDeleted = false;
             superUsuario.Nombre = "super";
@@ -90,7 +91,7 @@ namespace WPP.Service.BaseServiceClasses
             superUsuario.Password = "12345";
             superUsuario.FechaNac = DateTime.Now;
 
-            //Session.Save(superUsuario);
+       //     Session.Save(superUsuario);
 
             /*Catalogo cat = new Catalogo();
             cat.CreateDate = DateTime.Now;

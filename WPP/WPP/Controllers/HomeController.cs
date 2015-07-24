@@ -64,7 +64,7 @@ namespace WPP.Controllers
 
             String f = "";
             f += "";
-            usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
+          //  usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
 
 
 

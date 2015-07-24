@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WPP.Entities.Objects.Generales;
 
 namespace WPP.Helpers
 {
@@ -13,6 +14,7 @@ namespace WPP.Helpers
 
         public static readonly  String[] ListaRoles = { ROL_ADMINISTRADOR, ROL_SUPER_USUARIO };
 
+        public static Usuario Usuario;
        
     }
 }

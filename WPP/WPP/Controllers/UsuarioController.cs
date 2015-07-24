@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using WPP.Entities.Objects.Generales;
 using WPP.Helpers;
 using WPP.Models;
 using WPP.Security;
@@ -53,18 +54,17 @@ namespace WPP.Controllers
         }
 
 
-        public ActionResult CrearUsuario()
-        {
-
-        }
+        
 
 
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
         {
-            if (ModelState.IsValid && wppMemberShipProvider.ValidateUser(login.Email, login.Password))
+            Usuario usuario = wppMemberShipProvider.ValidateUser(login.Email, login.Password);
+            if (ModelState.IsValid == true && usuario != null)
             {
+               WPPConstants.Usuario = usuario; 
                 FormsAuthentication.SetAuthCookie(login.Email, true);
                 return RedirectURL(returnUrl);
             }

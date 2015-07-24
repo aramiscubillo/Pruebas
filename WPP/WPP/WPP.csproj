@@ -148,6 +148,7 @@
     <Compile Include="Models\Generales\UsuarioModel.cs" />
     <Compile Include="Security\AccessDeniedAuthorizeAttribute.cs" />
     <Compile Include="Security\IWPPMembershipProvider.cs" />
+    <Compile Include="Security\SecurityHelper.cs" />
     <Compile Include="Security\WPPRolesProvider.cs" />
     <Compile Include="Security\WPPMembershipProvider.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
