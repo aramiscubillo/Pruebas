@@ -15,6 +15,7 @@ namespace WPP.Entities.Mappings
         {
             Table("Usuario"); 
             Id(c => c.Id);
+<<<<<<< HEAD
             Version(u => u.Version);
             Map(u => u.CreateDate).Not.Nullable();
             Map(u => u.DateLastModified).Nullable();
@@ -25,7 +26,13 @@ namespace WPP.Entities.Mappings
             Map(r => r.Email).Not.Nullable();
             Map(r => r.Password).Not.Nullable();
             Map(r => r.Roles).Not.Nullable();
-
+          
+=======
+            Map(c => c.Nombre);
+            Map(c => c.Apellido);
+            Map(c => c.Password);
+            Map(c => c.Email);
+>>>>>>> 15d348f91d4c094903603669982b1d3e582e0de9
         }
     }
 }

@@ -13,6 +13,8 @@ namespace WPP.App_Start
     using WPP.Service.BaseServiceClasses;
     using Ninject.Extensions.Conventions;
     using Ninject.Extensions.Interception;
+    using WPP.Security;
+    using System.Web.Security;
 
     public static class NinjectWebCommon 
     {

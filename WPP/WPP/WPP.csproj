@@ -147,6 +147,7 @@
     <Compile Include="Helpers\WPPConstants.cs" />
     <Compile Include="Models\ModuloContratos\UsuarioModel.cs" />
     <Compile Include="Security\AccessDeniedAuthorizeAttribute.cs" />
+    <Compile Include="Security\IWPPMembershipProvider.cs" />
     <Compile Include="Security\WPPRolesProvider.cs" />
     <Compile Include="Security\WPPMembershipProvider.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />

@@ -7,12 +7,29 @@ using System.Web.Security;
 using WPP.Helpers;
 using WPP.Models;
 using WPP.Security;
+using WPP.Service.ModuloContratos;
 
 namespace WPP.Controllers
 {
-    public class UsuarioController : Controller
+    public class UsuarioController : BaseController
     {
 
+        private IUsuarioService usuarioService;
+        private IWPPMembershipProvider wppMemberShipProvider;
+
+        public UsuarioController(IUsuarioService service, IWPPMembershipProvider WPPMemberProvider)
+        {
+            try
+            {
+                this.usuarioService = service;
+                wppMemberShipProvider = WPPMemberProvider;
+            }
+            catch (Exception ex)
+            {
+                
+            }
+        }
+        
         [HttpGet]
         [AllowAnonymous]
         public ActionResult Login()
@@ -40,7 +57,7 @@ namespace WPP.Controllers
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
         {
-            if (ModelState.IsValid && Membership.ValidateUser(login.Email, login.Password))
+            if (ModelState.IsValid && wppMemberShipProvider.ValidateUser(login.Email, login.Password))
             {
                 FormsAuthentication.SetAuthCookie(login.Email, true);
                 return RedirectURL(returnUrl);
