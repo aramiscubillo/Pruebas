@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
+using WPP.Entities.Objects.Generales;
 
 namespace WPP.Security
 {
@@ -40,6 +41,6 @@ namespace WPP.Security
         
         void UpdateUser(MembershipUser user);
 
-        bool ValidateUser(string username, string password);
+        Usuario ValidateUser(string username, string password);
     }
 }

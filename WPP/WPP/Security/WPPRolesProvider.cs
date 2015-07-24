@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
+using WPP.Entities.Objects.Generales;
+using WPP.Helpers;
 
 namespace WPP.Security
 {
@@ -12,6 +14,8 @@ namespace WPP.Security
         {
             throw new NotImplementedException();
         }
+
+   
 
         public override string ApplicationName
         {
@@ -47,15 +51,20 @@ namespace WPP.Security
 
         public override string[] GetRolesForUser(string username)
         {
-            switch (username)
-            {
-                case "aramis.cubillo@yahoo.com":
-                        return new[]{"Manager", "Admin"};
-                case "dbarboza@sapiens.co.cr":
-                        return new[] { "Manager", "Admin" };  
-                default:
-                    return new string[]{};
-            }
+            Usuario usuario = WPPConstants.Usuario;
+
+            return usuario.Roles.Split(',');
+
+            //switch (username)
+            //{
+                   
+            //    case "aramis.cubillo@yahoo.com":
+            //            return new[]{"Manager", "Admin"};
+            //    case "dbarboza@sapiens.co.cr":
+            //            return new[] { "Manager", "Admin" };  
+            //    default:
+            //        return new string[]{};
+            //}
         }
 
         public override string[] GetUsersInRole(string roleName)

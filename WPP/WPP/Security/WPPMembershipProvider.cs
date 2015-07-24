@@ -11,20 +11,20 @@ namespace WPP.Security
 {
     public class WPPMembershipProvider : IWPPMembershipProvider
     {
-         private IUsuarioService usuarioService;
+        private IUsuarioService usuarioService;
 
-         
-         public WPPMembershipProvider(IUsuarioService service)
-         {
-             try
-             {
-                 this.usuarioService = service;
-             }
-             catch (Exception ex)
-             {
 
-             }
-         }
+        public WPPMembershipProvider(IUsuarioService service)
+        {
+            try
+            {
+                this.usuarioService = service;
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
         public string ApplicationName
         {
@@ -163,7 +163,7 @@ namespace WPP.Security
             throw new NotImplementedException();
         }
 
-        public bool ValidateUser(string username, string password)
+        public Usuario ValidateUser(string username, string password)
         {
             IDictionary<string, object> criteriaUser = new Dictionary<string, object>();
             criteriaUser.Add("Email", username);
@@ -171,10 +171,11 @@ namespace WPP.Security
 
             Usuario usuario = usuarioService.Get(criteriaUser);
 
-            if (usuario != null)
-            { return true; }
-            else
-            { return false; }           
+            return usuario;
+            //if (usuario != null)
+            //{ return true; }
+            //else
+            //{ return false; }           
         }
     }
 }
