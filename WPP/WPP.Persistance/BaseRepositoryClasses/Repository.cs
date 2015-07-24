@@ -68,15 +68,15 @@ namespace WPP.Persistance.BaseRepositoryClasses
 
         public T Get(IDictionary<string, object> criterias)
         {
-             
+
             ICriteria criteria = Session.CreateCriteria<T>();
+            
             foreach (var x in criterias)
             {
                 criteria.Add(Restrictions.Eq(x.Key, x.Value));
             }
-            var resultado= criteria.UniqueResult<T>();
-            
-            return resultado;
+            return criteria.UniqueResult<T>();            
+            //return resultado.FirstOrDefault<T>();
         }
 
         public T Get(Guid id)

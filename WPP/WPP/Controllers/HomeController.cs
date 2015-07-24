@@ -61,7 +61,7 @@ namespace WPP.Controllers
         //  Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
           // CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
 
-            usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
+         //   usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
 
 
            return View("Index");//, companiaModel
