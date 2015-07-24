@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Base;
+using WPP.Entities.Objects.Base;
 using WPP.Service.BaseServiceClasses;
 
 namespace WPP.Persistance.BaseRepositoryClasses

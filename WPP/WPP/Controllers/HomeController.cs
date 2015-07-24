@@ -8,8 +8,8 @@ using WPP.Service.BaseServiceClasses;
 using WPP.Service.ModuloContratos;
 using WPP.Mapper;
 using WPP.Model;
-using WPP.Entities.Base;
 using WPP.App_Start;
+using WPP.Entities.Objects.Generales;
 
 namespace WPP.Controllers
 {
@@ -39,7 +39,6 @@ namespace WPP.Controllers
             try
             {
                 this.usuarioService = service;
-                ObjectsCreator creator = new ObjectsCreator();
             }
             catch (Exception ex)
             {

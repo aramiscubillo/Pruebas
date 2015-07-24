@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Base;
+using WPP.Entities.Objects.Base;
 
-namespace WPP.Entities.Generales
+namespace WPP.Entities.Objects.ModuloContratos
 {
-    public class Catalogo : Entity
+    public class Compania: Entity
     {
         public virtual String Nombre { get; set; }
-        public virtual String Tipo { get; set; }
+        public virtual String Cedula { get; set; }
     }
 }

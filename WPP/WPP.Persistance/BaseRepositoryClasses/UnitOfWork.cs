@@ -10,9 +10,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Base;
-using WPP.Entities.Generales;
 using WPP.Entities.Mappings;
+using WPP.Entities.Mappings.Generales;
+using WPP.Entities.Objects.Generales;
 
 namespace WPP.Service.BaseServiceClasses
 {
@@ -86,7 +86,7 @@ namespace WPP.Service.BaseServiceClasses
             superUsuario.CreateDate = DateTime.Now;
             superUsuario.DateLastModified = DateTime.Now;
             superUsuario.Roles = "Super Usuario";
-            superUsuario.
+            superUsuario.FechaNac = DateTime.Now;
 
             /*Catalogo cat = new Catalogo();
             cat.CreateDate = DateTime.Now;

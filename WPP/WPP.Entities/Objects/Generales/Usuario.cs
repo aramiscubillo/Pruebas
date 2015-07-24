@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Generales;
+using WPP.Entities.Objects.Base;
 
-namespace WPP.Entities.Base
+namespace WPP.Entities.Objects.Generales
 {
     public class Usuario : Entity
     {
@@ -16,6 +16,6 @@ namespace WPP.Entities.Base
 
         public String Email { get; set; }
         public String Password { get; set; }
-        public virtual IList<String> Roles { get; set; }
+        public virtual String Roles { get; set; }
     }
 }

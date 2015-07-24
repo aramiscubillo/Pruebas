@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Base;
+using WPP.Entities.Objects.Generales;
 
-namespace WPP.Entities.Mappings
+namespace WPP.Entities.Mappings.Generales
 {
     public class UsuarioMapping : ClassMap<Usuario>
     {

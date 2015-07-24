@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Generales;
+using WPP.Entities.Objects.Generales;
 
 namespace WPP.Entities.Mappings.Generales
 {

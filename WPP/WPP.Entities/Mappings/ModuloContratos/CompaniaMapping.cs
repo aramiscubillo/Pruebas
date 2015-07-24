@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WPP.Entities.Base;
+using WPP.Entities.Objects.ModuloContratos;
 
-namespace WPP.Entities.Mappings
+namespace WPP.Entities.Mappings.ModuloContratos
 {
     public class CompaniaMapping : ClassMap<Compania>
     {
