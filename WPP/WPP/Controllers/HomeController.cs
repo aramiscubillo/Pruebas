@@ -8,7 +8,8 @@ using WPP.Service.BaseServiceClasses;
 using WPP.Service.ModuloContratos;
 using WPP.Mapper;
 using WPP.Model;
-using WPP.Entities.Base;
+using WPP.App_Start;
+using WPP.Entities.Objects.Generales;
 
 namespace WPP.Controllers
 {
@@ -38,7 +39,6 @@ namespace WPP.Controllers
             try
             {
                 this.usuarioService = service;
-                this.logger.Debug("prueba");
             }
             catch (Exception ex)
             {
@@ -61,7 +61,11 @@ namespace WPP.Controllers
         //  Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
           // CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
 
-         //   usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
+
+            String f = "";
+            f += "";
+            usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
+
 
 
            return View("Index");//, companiaModel

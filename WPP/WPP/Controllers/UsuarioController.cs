@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using WPP.Helpers;
 using WPP.Models;
 using WPP.Security;
 using WPP.Service.ModuloContratos;
@@ -37,13 +38,19 @@ namespace WPP.Controllers
         }
 
         [HttpGet]
-        [AccessDeniedAuthorizeAttribute(Roles = "Admin")]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult Index()
         {
                 return View();
         }
 
 
+        [HttpGet]
+        public ActionResult CrearUsuario()
+        {
+            ViewBag.Roles = WPPConstants.ListaRoles;
+            return View();
+        }
 
 
         [HttpPost]

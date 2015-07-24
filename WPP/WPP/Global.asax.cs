@@ -40,61 +40,6 @@ namespace WPP
         }
 
 
-        private void configureNHibernate()
-        {
-            var nhConfig = Fluently.Configure()
-                    .Database(MsSqlConfiguration.MsSql2008
-                    .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
-                        .AdoNetBatchSize(100))
-                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<UsuarioMapping>())
-                        .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CompaniaMapping>())
-                 .ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
-                 .Create(true, true))
-                        .BuildConfiguration()
-                        .AddProperties(new Dictionary<string, string>
-                               {
-                                   { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
-                                });
-           // SessionFactory = nhConfig.BuildSessionFactory();
-
-            
-            //Ninject.IKernel kernel = new StandardKernel();
-
-            //kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
-            //kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
-
-            //kernel.Bind<ISessionFactory>().ToConstant(SessionFactory).InSingletonScope();
-
-            //kernel.Bind<IService<Usuario>>().To<UsuarioService>().InRequestScope();
-
-        }
-
-           
-        //private void configureNHibernate()
-        //{
-        //    var nhConfig = Fluently.Configure()
-        //            .Database(MsSqlConfiguration.MsSql2008
-        //            .ConnectionString(constr => constr.FromConnectionStringWithKey("db"))
-        //                .AdoNetBatchSize(100))
-        //                .Mappings(maps => maps.FluentMappings.AddFromAssemblyOf<CitaMapping>())
-        //        /* .BuildConfiguration()
-        //         .AddProperties(new Dictionary<string, string>
-        //                {
-        //                    { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
-        //                 });*/
-        //        //.ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true))
-        //        .ExposeConfiguration(cfg => new SchemaExport(cfg.SetProperty("hbm2ddl.auto", "create-drop"))
-        //            .BuildConfiguration()
-        //                .AddProperties(new Dictionary<string, string>
-        //                       {
-        //                           { NHibernate.Cfg.Environment.CurrentSessionContextClass, "web" }
-        //                        });
-        //    SessionFactory = nhConfig.BuildSessionFactory();
-        //    //createBaseData();
-        //}
-
-
         protected void Application_BeginRequest()
         {
             CultureInfo cInf = new CultureInfo("en-US", false);

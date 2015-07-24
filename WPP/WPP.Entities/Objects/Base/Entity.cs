@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPP.Entities.Base
+namespace WPP.Entities.Objects.Base
 {
     public abstract class Entity
     {

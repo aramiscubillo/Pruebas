@@ -53,7 +53,9 @@
     <Compile Include="BaseServiceClasses\AutomappingConfiguration.cs" />
     <Compile Include="BaseServiceClasses\IService.cs" />
     <Compile Include="BaseServiceClasses\Service.cs" />
+    <Compile Include="Generales\CatalogoService.cs" />
     <Compile Include="ModuloContratos\CompaniaService.cs" />
+    <Compile Include="Generales\ICatalogoService.cs" />
     <Compile Include="ModuloContratos\ICompaniaService.cs" />
     <Compile Include="ModuloContratos\IUsuarioService.cs" />
     <Compile Include="ModuloContratos\UsuarioService.cs" />

@@ -22,8 +22,17 @@ namespace WPP.Controllers
 
         protected override void OnResultExecuted(ResultExecutedContext filterContext)
         {
-            if (!filterContext.IsChildAction)
-                UnitOfWork.Commit();
+            try
+            {
+                if (!filterContext.IsChildAction)
+                    UnitOfWork.Commit();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+          
         }
 
     }
