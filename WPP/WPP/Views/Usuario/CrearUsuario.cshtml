@@ -1,4 +1,4 @@
-﻿@model WPP.Models.ModuloContratos.UsuarioModel
+﻿@model WPP.Models.Generales.UsuarioModel
 
 @{
     ViewBag.Title = "Crear Usuario";
@@ -7,39 +7,101 @@
 
 <h2>Crear Usuario</h2>
 
-@using (Html.BeginForm("Crearusuario", "Usuario", FormMethod.Post, new { id = "frmCrearUsuario" , @class="form-horizontal"})) 
-{ 
-     @Html.ValidationSummary(true)
+@using (Html.BeginForm("Crearusuario", "Usuario", FormMethod.Post, new { id = "frmCrearUsuario", @class = "form-horizontal" }))
+{
+    @Html.ValidationSummary(true)
     <div class="form-group">
         <label for="nombre">Nombre</label>
         @Html.TextBoxFor(m => m.Nombre, new { @Class = "form-control", id = "Nombre" })
     </div>
     <div class="form-group">
-        <label for="nombre">Apellido</label>
+        <label for="Apellido">Apellido</label>
         @Html.TextBoxFor(m => m.Apellido, new { @Class = "form-control", id = "Apellido" })
     </div>
     <div class="form-group">
-        <label for="nombre">Fecha de nacimiento</label>
+        <label for="FechaNac">Fecha de nacimiento</label>
         @Html.TextBoxFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
     </div>
-     <div class="form-group">
-        <label for="nombre">Email</label>
+    <div class="form-group">
+        <label for="Email">Email</label>
         @Html.TextBoxFor(m => m.Email, new { @Class = "form-control", id = "Email" })
     </div>
-     <div class="form-group">
-        <label for="nombre">Fecha de nacimiento</label>
+    <div class="form-group">
+        <label for="FechaNac">Fecha de nacimiento</label>
         @Html.TextBoxFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
     </div>
-     <div class="form-group">
-        <label for="nombre">Contraseña</label>
+    <div class="form-group">
+        <label for="Password">Contraseña</label>
         @Html.PasswordFor(m => m.Password, new { @Class = "form-control", id = "Password" })
     </div>
-     <div class="form-group">
-        <label for="nombre">Confirmar Contraseña</label>
+    <div class="form-group">
+        <label for="ConfirmPassword">Confirmar Contraseña</label>
         @Html.PasswordFor(m => m.ConfirmPassword, new { @Class = "form-control", id = "ConfirmPassword" })
+    </div>
+    <div class="form-group">
+        <label for="nombre">Roles</label>
+        <br />
+        @Html.HiddenFor(m => m.Roles)
+        @foreach (var r in ViewBag.Roles)
+        {
+            <input type="checkbox" value='@Html.DisplayFor(s => r)' name="ckbRoles" />
+            @Html.DisplayFor(s => r)
+            <br />
+
+        }
     </div>
 
     <button type="submit" class="btn btn-primary">Crear</button>
     @Html.ActionLink("Cancelar", "Index", "Usuario", new { @Class = "btn btn-primary" }, null)
 
 }
+
+
+
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+
+        $('.Date').datepicker({
+            dateFormat: 'dd-mm-yy',
+            changeYear: true
+        });
+
+
+        $("input:checkbox[name='ckbRoles']").change(function () {
+            actual = $("input#Roles").val();
+            append = $(this).val();
+            if ($(this).is(":checked")) {
+                if (!actual) {
+                    actual = append;
+                    $("input#Roles").val(actual);
+                } else {
+                    actual = actual + ',' + append;
+                    $("input#Roles").val(actual);
+                }
+            } else {
+                if (actual) {
+                    if (actual.indexOf(append) == 0) {
+                        if (actual == append) {
+                            actual = '';
+                        } else {
+                            actual = actual.split(append + ',').pop();
+                        }
+                        $("input#Roles").val(actual);
+                    } else {
+                        preStr = actual.substring(0, actual.indexOf(append) - 1);
+                        postStr = actual.split(append).pop();
+                        actual = preStr + postStr;
+                        $("input#Roles").val(actual);
+                    }
+                }
+            }
+            //alert(actual);
+        });
+
+    });// end document ready
+
+
+
+</script>

@@ -53,6 +53,12 @@ namespace WPP.Controllers
         }
 
 
+        public ActionResult CrearUsuario()
+        {
+
+        }
+
+
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)

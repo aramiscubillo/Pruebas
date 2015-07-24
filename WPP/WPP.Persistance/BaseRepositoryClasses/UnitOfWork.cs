@@ -86,7 +86,11 @@ namespace WPP.Service.BaseServiceClasses
             superUsuario.CreateDate = DateTime.Now;
             superUsuario.DateLastModified = DateTime.Now;
             superUsuario.Roles = "Super Usuario";
+            superUsuario.Email = "user@user.com";
+            superUsuario.Password = "12345";
             superUsuario.FechaNac = DateTime.Now;
+
+            //Session.Save(superUsuario);
 
             /*Catalogo cat = new Catalogo();
             cat.CreateDate = DateTime.Now;

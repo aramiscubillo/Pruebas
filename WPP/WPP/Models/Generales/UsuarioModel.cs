@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WPP.Models.ModuloContratos
+namespace WPP.Models.Generales
 {
     public class UsuarioModel
     {
@@ -20,7 +20,7 @@ namespace WPP.Models.ModuloContratos
         public DateTime FechaNac { get; set; }
 
         [Required(ErrorMessage = "Por favor introdusca al menos un rol")]
-        public IList<String> Roles { get; set; }
+        public String Roles { get; set; }
 
         [Required(ErrorMessage = "Por favor introdusca el correo")]
         [EmailAddress(ErrorMessage = "Por favor introdusca un correo válido")]

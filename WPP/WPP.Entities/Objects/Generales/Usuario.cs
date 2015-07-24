@@ -14,8 +14,8 @@ namespace WPP.Entities.Objects.Generales
         public virtual String Apellidos { get; set; }
         public virtual DateTime FechaNac { get; set; }
 
-        public String Email { get; set; }
-        public String Password { get; set; }
+        public virtual String Email { get; set; }
+        public virtual String Password { get; set; }
         public virtual String Roles { get; set; }
     }
 }
