@@ -5,12 +5,7 @@
 @{
     ViewBag.Title = "Compañía";
 }
-<fieldset>
-    <legend>Test Controller</legend>
+<h1>WPP HOME</h1>
 
-    <div class="display-label">Nombre</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Nombre)
-    </div>
-    @Html.ActionLink("Other Method", "TestMethod", "Home")
-</fieldset>
+@Html.ActionLink("Usuarios", "Index", "Usuario")
+

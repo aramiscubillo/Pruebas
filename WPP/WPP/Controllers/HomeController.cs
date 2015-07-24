@@ -10,6 +10,7 @@ using WPP.Mapper;
 using WPP.Model;
 using WPP.App_Start;
 using WPP.Entities.Objects.Generales;
+using WPP.Helpers;
 
 namespace WPP.Controllers
 {
@@ -53,7 +54,7 @@ namespace WPP.Controllers
         }
 
 
-        [AccessDeniedAuthorizeAttribute(Roles = "Admin")]
+      // [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
 
         public ActionResult Index()
         {
@@ -61,10 +62,10 @@ namespace WPP.Controllers
         //  Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
           // CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
 
-
-            String f = "";
-            f += "";
-            usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
+            Session[""] = null;
+            //String f = "";
+            //f += "";
+            //usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
 
 
 

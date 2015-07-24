@@ -38,7 +38,18 @@ namespace WPP.Models.Generales
         [Compare("Password")]
         public string ConfirmPassword { get; set; }
 
-        public int Edad { get; set; }
+        public int Edad
+        {
+            get
+            {
+
+                DateTime today = DateTime.Today;
+                int edad = today.Year - FechaNac.Year;
+                if (FechaNac > today.AddYears(-edad)) edad--;
+                return edad;
+
+            }
+        }
 
     }
 }

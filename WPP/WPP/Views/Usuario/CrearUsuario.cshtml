@@ -10,36 +10,41 @@
 @using (Html.BeginForm("Crearusuario", "Usuario", FormMethod.Post, new { id = "frmCrearUsuario", @class = "form-horizontal" }))
 {
     @Html.ValidationSummary(true)
+    
     <div class="form-group">
         <label for="nombre">Nombre</label>
         @Html.TextBoxFor(m => m.Nombre, new { @Class = "form-control", id = "Nombre" })
+        @Html.ValidationMessageFor(m => m.Nombre)
     </div>
     <div class="form-group">
         <label for="Apellido">Apellido</label>
         @Html.TextBoxFor(m => m.Apellido, new { @Class = "form-control", id = "Apellido" })
+        @Html.ValidationMessageFor(m => m.Apellido)
     </div>
     <div class="form-group">
         <label for="FechaNac">Fecha de nacimiento</label>
         @Html.TextBoxFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
+        @Html.ValidationMessageFor(m => m.FechaNac)
     </div>
     <div class="form-group">
         <label for="Email">Email</label>
         @Html.TextBoxFor(m => m.Email, new { @Class = "form-control", id = "Email" })
+        @Html.ValidationMessageFor(m => m.Email)
     </div>
-    <div class="form-group">
-        <label for="FechaNac">Fecha de nacimiento</label>
-        @Html.TextBoxFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
-    </div>
+
     <div class="form-group">
         <label for="Password">Contraseña</label>
         @Html.PasswordFor(m => m.Password, new { @Class = "form-control", id = "Password" })
+        @Html.ValidationMessageFor(m => m.Password)
     </div>
     <div class="form-group">
         <label for="ConfirmPassword">Confirmar Contraseña</label>
         @Html.PasswordFor(m => m.ConfirmPassword, new { @Class = "form-control", id = "ConfirmPassword" })
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
     </div>
     <div class="form-group">
         <label for="nombre">Roles</label>
+        @Html.ValidationMessageFor(m => m.Roles)
         <br />
         @Html.HiddenFor(m => m.Roles)
         @foreach (var r in ViewBag.Roles)
@@ -63,7 +68,7 @@
 
     $(document).ready(function () {
 
-        $('.Date').datepicker({
+        $('#FechaNac').datepicker({
             dateFormat: 'dd-mm-yy',
             changeYear: true
         });
