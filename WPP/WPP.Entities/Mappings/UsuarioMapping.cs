@@ -16,6 +16,9 @@ namespace WPP.Entities.Mappings
             Table("Usuario"); 
             Id(c => c.Id);
             Map(c => c.Nombre);
+            Map(c => c.Apellido);
+            Map(c => c.Password);
+            Map(c => c.Email);
         }
     }
 }

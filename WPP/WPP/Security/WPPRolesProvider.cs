@@ -51,7 +51,8 @@ namespace WPP.Security
             {
                 case "aramis.cubillo@yahoo.com":
                         return new[]{"Manager", "Admin"};
-                    
+                case "dbarboza@sapiens.co.cr":
+                        return new[] { "Manager", "Admin" };  
                 default:
                     return new string[]{};
             }

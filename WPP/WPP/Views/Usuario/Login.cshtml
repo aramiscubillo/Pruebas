@@ -18,7 +18,7 @@
                 <p>Welcome!</p>
                 <p>Ingrese el correo y contraseña</p>
 
-                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { id = "frmLogin" }))
+                @using (Html.BeginForm("Login", "Usuario", FormMethod.Post, new { id = "frmLogin" }))
                 {   @Html.ValidationSummary(true)
                     <div class="form-group">
                         <label for="exampleInputEmail1" class=" control-label">Email:</label>

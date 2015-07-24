@@ -1,16 +1,34 @@
-﻿using System;
+﻿using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
+using WPP.Entities.Base;
+using WPP.Service.ModuloContratos;
 
 namespace WPP.Security
 {
-    public class WPPMembershipProvider : MembershipProvider
+    public class WPPMembershipProvider : IWPPMembershipProvider
     {
 
+       
+         private IUsuarioService usuarioService;
 
-        public override string ApplicationName
+         
+         public WPPMembershipProvider(IUsuarioService service)
+         {
+             try
+             {
+                 this.usuarioService = service;
+             }
+             catch (Exception ex)
+             {
+
+             }
+         }
+
+        public string ApplicationName
         {
             get
             {
@@ -22,134 +40,143 @@ namespace WPP.Security
             }
         }
 
-        public override bool ChangePassword(string username, string oldPassword, string newPassword)
+        public bool ChangePassword(string username, string oldPassword, string newPassword)
         {
             throw new NotImplementedException();
         }
 
-        public override bool ChangePasswordQuestionAndAnswer(string username, string password, string newPasswordQuestion, string newPasswordAnswer)
+        public bool ChangePasswordQuestionAndAnswer(string username, string password, string newPasswordQuestion, string newPasswordAnswer)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out MembershipCreateStatus status)
+        public MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out MembershipCreateStatus status)
         {
             throw new NotImplementedException();
         }
 
-        public override bool DeleteUser(string username, bool deleteAllRelatedData)
+        public bool DeleteUser(string username, bool deleteAllRelatedData)
         {
             throw new NotImplementedException();
         }
 
-        public override bool EnablePasswordReset
+        public bool EnablePasswordReset
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override bool EnablePasswordRetrieval
+        public bool EnablePasswordRetrieval
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
+        public MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
+        public MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
+        public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, out int totalRecords)
         {
             throw new NotImplementedException();
         }
 
-        public override int GetNumberOfUsersOnline()
+        public int GetNumberOfUsersOnline()
         {
             throw new NotImplementedException();
         }
 
-        public override string GetPassword(string username, string answer)
+        public string GetPassword(string username, string answer)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUser GetUser(string username, bool userIsOnline)
+        public MembershipUser GetUser(string username, bool userIsOnline)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUser GetUser(object providerUserKey, bool userIsOnline)
+        public MembershipUser GetUser(object providerUserKey, bool userIsOnline)
         {
             throw new NotImplementedException();
         }
 
-        public override string GetUserNameByEmail(string email)
+        public string GetUserNameByEmail(string email)
         {
             throw new NotImplementedException();
         }
 
-        public override int MaxInvalidPasswordAttempts
+        public int MaxInvalidPasswordAttempts
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override int MinRequiredNonAlphanumericCharacters
+        public int MinRequiredNonAlphanumericCharacters
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override int MinRequiredPasswordLength
+        public int MinRequiredPasswordLength
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override int PasswordAttemptWindow
+        public int PasswordAttemptWindow
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override MembershipPasswordFormat PasswordFormat
+        public MembershipPasswordFormat PasswordFormat
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override string PasswordStrengthRegularExpression
+        public string PasswordStrengthRegularExpression
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override bool RequiresQuestionAndAnswer
+        public bool RequiresQuestionAndAnswer
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override bool RequiresUniqueEmail
+        public bool RequiresUniqueEmail
         {
             get { throw new NotImplementedException(); }
         }
 
-        public override string ResetPassword(string username, string answer)
+        public string ResetPassword(string username, string answer)
         {
             throw new NotImplementedException();
         }
 
-        public override bool UnlockUser(string userName)
+        public bool UnlockUser(string userName)
         {
             throw new NotImplementedException();
         }
 
-        public override void UpdateUser(MembershipUser user)
+        public void UpdateUser(MembershipUser user)
         {
             throw new NotImplementedException();
         }
 
-        public override bool ValidateUser(string username, string password)
+        public bool ValidateUser(string username, string password)
         {
-            return true;
+            IDictionary<string, object> criteriaUser = new Dictionary<string, object>();
+            criteriaUser.Add("Email", username);
+            criteriaUser.Add("Password", password);
+
+            Usuario usuario = usuarioService.Get(criteriaUser);
+
+            if (usuario != null)
+            { return true; }
+            else
+            { return false; }           
         }
     }
 }
