@@ -144,10 +144,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="Helpers\WPPConstants.cs" />
     <Compile Include="Models\ModuloContratos\UsuarioModel.cs" />
     <Compile Include="Security\AccessDeniedAuthorizeAttribute.cs" />
     <Compile Include="Security\WPPRolesProvider.cs" />
-    <Compile Include="App_Start\Security.cs" />
     <Compile Include="Security\WPPMembershipProvider.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
@@ -201,7 +201,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="logs\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
