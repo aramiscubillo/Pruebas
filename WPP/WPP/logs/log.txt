@@ -5705,3 +5705,346 @@ DEBUG 2015-07-23 15:26:15,341  9510ms ConnectionProvider     lambda_method      
 DEBUG 2015-07-23 15:26:15,342  9511ms AdoTransaction         lambda_method      - IDbTransaction disposed.
 DEBUG 2015-07-23 15:26:15,343  9512ms SessionImpl            lambda_method      - closing session
 DEBUG 2015-07-23 15:26:15,344  9513ms AbstractBatcher        lambda_method      - running BatcherImpl.Dispose(true)
+INFO  2015-07-23 16:14:20,434   420ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:14:20,465   451ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:14:20,466   452ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:14:20,467   453ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:14:20,597   583ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:14:21,209  1195ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:14:21,245  1231ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:14:21,284  1269ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:14:21,293  1279ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:14:21,294  1280ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:14:21,298  1284ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:14:21,299  1285ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:14:21,300  1286ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:14:21,300  1286ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:14:21,301  1287ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:14:21,302  1288ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:14:21,303  1289ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:14:21,303  1289ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:14:21,304  1290ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:14:21,305  1291ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:14:21,315  1301ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:14:21,318  1304ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:14:21,355  1341ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:14:21,356  1342ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:14:21,357  1343ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:14:21,358  1344ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:14:21,374  1360ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:14:21,375  1361ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:14:21,376  1362ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:14:21,376  1362ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:14:21,377  1363ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:14:21,378  1364ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:14:21,378  1364ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:14:21,378  1364ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:14:21,379  1365ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:14:21,380  1366ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:14:21,381  1367ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:14:21,382  1368ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:14:21,383  1369ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:14:21,383  1369ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:14:21,384  1370ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:14:21,385  1371ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:14:21,385  1371ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:14:21,395  1381ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:14:21,396  1382ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:14:21,397  1383ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:14:21,398  1384ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver
+INFO  2015-07-23 16:21:21,463   193ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:21:21,487   217ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:21:21,487   217ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:21:21,488   218ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:21:21,578   308ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:21:22,113   843ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:22,148   878ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:21:22,167   897ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:21:22,178   908ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:21:22,179   909ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:21:22,182   912ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:21:22,183   913ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:22,184   914ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:21:22,185   915ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:21:22,186   916ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:21:22,188   918ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:21:22,189   919ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:21:22,189   919ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:21:22,190   920ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:21:22,191   921ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:21:22,201   931ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:22,204   934ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:22,237   967ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:21:22,238   968ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:21:22,239   969ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:21:22,240   970ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:21:22,254   984ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:21:22,255   985ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:21:22,256   986ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:21:22,256   986ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:21:22,256   986ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:21:22,257   987ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:21:22,257   987ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:21:22,258   988ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:21:22,258   988ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:21:22,259   989ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:21:22,261   991ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:21:22,261   991ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:21:22,262   992ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:21:22,263   993ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:21:22,263   993ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:21:22,264   994ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:21:22,264   994ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:21:22,274  1004ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:21:22,275  1005ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:21:22,275  1005ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:21:22,277  1007ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver
+INFO  2015-07-23 16:21:48,947   238ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:21:48,970   261ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:21:48,971   262ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:21:48,972   264ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:21:49,080   372ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:21:49,654   945ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:49,688   980ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:21:49,705   997ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:21:49,715  1007ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:21:49,716  1008ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:21:49,719  1011ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:21:49,720  1012ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:49,721  1013ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:21:49,722  1014ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:21:49,722  1014ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:21:49,724  1016ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:21:49,724  1016ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:21:49,725  1017ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:21:49,725  1017ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:21:49,726  1018ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:21:49,745  1037ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:49,749  1041ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:21:49,783  1075ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:21:49,784  1076ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:21:49,784  1076ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:21:49,785  1077ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:21:49,800  1092ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:21:49,801  1093ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:21:49,802  1094ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:21:49,802  1094ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:21:49,803  1095ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:21:49,803  1095ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:21:49,803  1095ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:21:49,804  1096ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:21:49,804  1096ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:21:49,805  1097ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:21:49,806  1098ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:21:49,807  1099ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:21:49,808  1100ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:21:49,808  1100ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:21:49,809  1101ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:21:49,809  1101ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:21:49,810  1102ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:21:49,818  1110ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:21:49,819  1111ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:21:49,819  1111ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:21:49,821  1113ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver
+INFO  2015-07-23 16:22:31,525   197ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:22:31,548   220ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:22:31,548   220ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:22:31,549   221ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:22:31,649   321ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:22:32,228   900ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:22:32,262   934ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:22:32,282   954ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:22:32,294   966ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:22:32,295   967ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:22:32,298   970ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:22:32,299   971ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:22:32,300   972ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:22:32,300   972ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:22:32,301   973ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:22:32,303   975ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:22:32,303   975ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:22:32,304   976ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:22:32,304   976ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:22:32,305   977ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:22:32,316   988ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:22:32,318   990ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:22:32,357  1029ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:22:32,358  1030ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:22:32,360  1032ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:22:32,360  1032ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:22:32,377  1049ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:22:32,378  1050ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:22:32,379  1051ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:22:32,379  1051ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:22:32,380  1052ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:22:32,380  1052ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:22:32,381  1053ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:22:32,381  1053ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:22:32,382  1054ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:22:32,383  1055ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:22:32,384  1056ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:22:32,385  1057ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:22:32,386  1058ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:22:32,386  1058ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:22:32,387  1059ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:22:32,387  1059ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:22:32,388  1060ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:22:32,398  1070ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:22:32,399  1071ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:22:32,400  1072ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:22:32,401  1073ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver
+INFO  2015-07-23 16:26:33,866 15145ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:26:33,889 15168ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:26:33,890 15169ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:26:33,891 15170ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:26:33,990 15269ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:26:34,522 15801ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:26:34,555 15834ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:26:34,571 15850ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:26:34,581 15860ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:26:34,582 15861ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:26:34,585 15864ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:26:34,586 15865ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:26:34,587 15866ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:26:34,587 15866ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:26:34,587 15866ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:26:34,589 15868ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:26:34,590 15869ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:26:34,590 15869ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:26:34,590 15869ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:26:34,591 15870ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:26:34,604 15883ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:26:34,608 15887ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:26:34,645 15924ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:26:34,646 15925ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:26:34,647 15926ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:26:34,648 15927ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:26:34,663 15942ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:26:34,665 15944ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:26:34,665 15944ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:26:34,665 15944ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:26:34,666 15945ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:26:34,666 15945ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:26:34,666 15945ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:26:34,667 15946ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:26:34,667 15946ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:26:34,668 15947ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:26:34,669 15948ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:26:34,670 15949ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:26:34,670 15949ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:26:34,671 15950ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:26:34,672 15951ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:26:34,672 15951ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:26:34,673 15952ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:26:34,684 15963ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:26:34,685 15964ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:26:34,686 15965ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:26:34,687 15966ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver
+INFO  2015-07-23 16:32:56,577  6192ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:32:56,601  6215ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:32:56,602  6216ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:32:56,603  6217ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:32:56,699  6314ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:32:57,245  6860ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:32:57,278  6893ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:32:57,296  6911ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:32:57,306  6921ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:32:57,307  6922ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:32:57,311  6926ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:32:57,312  6927ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:32:57,313  6928ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:32:57,314  6929ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:32:57,314  6929ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:32:57,317  6932ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:32:57,318  6933ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:32:57,318  6933ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:32:57,318  6933ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:32:57,320  6935ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:32:57,331  6946ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:32:57,335  6950ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:32:57,374  6989ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:32:57,374  6989ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:32:57,375  6990ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:32:57,376  6991ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:32:57,391  7006ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:32:57,392  7007ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:32:57,393  7008ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:32:57,393  7008ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:32:57,394  7009ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:32:57,394  7009ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:32:57,395  7010ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:32:57,395  7010ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:32:57,396  7011ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:32:57,397  7012ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:32:57,398  7013ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:32:57,399  7014ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:32:57,399  7014ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:32:57,412  7027ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:32:57,413  7028ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:32:57,413  7028ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:32:57,414  7029ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:32:57,423  7038ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:32:57,424  7039ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:32:57,425  7040ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:32:57,426  7041ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver
+INFO  2015-07-23 16:34:25,065  2715ms Environment            lambda_method      - NHibernate 4.0.3.GA (assembly 4.0.0.4000)
+INFO  2015-07-23 16:34:25,088  2738ms Environment            lambda_method      - hibernate-configuration section not found in application configuration file
+INFO  2015-07-23 16:34:25,089  2739ms Environment            lambda_method      - Bytecode provider name : lcg
+INFO  2015-07-23 16:34:25,090  2740ms Environment            lambda_method      - Using reflection optimizer
+DEBUG 2015-07-23 16:34:25,183  2833ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Compania, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Compania"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property><property name="Cedula" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Cedula" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:34:25,697  3346ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:34:25,732  3381ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Compania -> Compania
+DEBUG 2015-07-23 16:34:25,748  3397ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:34:25,758  3407ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+DEBUG 2015-07-23 16:34:25,759  3408ms Binder                 lambda_method      - Mapped property: Cedula -> Cedula, type: String
+DEBUG 2015-07-23 16:34:25,762  3411ms Configuration          lambda_method      - Mapping XML:
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"><class xmlns="urn:nhibernate-mapping-2.2" name="WPP.Entities.Base.Usuario, WPP.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" table="Usuario"><id name="Id" type="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Id" /><generator class="guid.comb" /></id><property name="Nombre" type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><column name="Nombre" /></property></class></hibernate-mapping>
+INFO  2015-07-23 16:34:25,763  3412ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:34:25,763  3412ms Binder                 lambda_method      - Mapping class: WPP.Entities.Base.Usuario -> Usuario
+DEBUG 2015-07-23 16:34:25,764  3413ms Binder                 lambda_method      - Mapped property: Id -> Id, type: Guid
+DEBUG 2015-07-23 16:34:25,764  3413ms Binder                 lambda_method      - Mapped property: Nombre -> Nombre, type: String
+INFO  2015-07-23 16:34:25,767  3416ms Configuration          lambda_method      - checking mappings queue
+INFO  2015-07-23 16:34:25,767  3416ms Configuration          lambda_method      - processing one-to-many association mappings
+INFO  2015-07-23 16:34:25,768  3417ms Configuration          lambda_method      - processing one-to-one association property references
+INFO  2015-07-23 16:34:25,768  3417ms Configuration          lambda_method      - processing foreign key constraints
+INFO  2015-07-23 16:34:25,769  3418ms Configuration          lambda_method      - processing filters (second pass)
+INFO  2015-07-23 16:34:25,778  3427ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:34:25,781  3430ms Dialect                lambda_method      - Using dialect: NHibernate.Dialect.Oracle10gDialect
+INFO  2015-07-23 16:34:25,813  3462ms eptionConverterFactory lambda_method      - Using dialect defined converter
+INFO  2015-07-23 16:34:25,813  3462ms SettingsFactory        lambda_method      - Generate SQL with comments: disabled
+INFO  2015-07-23 16:34:25,814  3463ms nectionProviderFactory lambda_method      - Initializing connection provider: NHibernate.Connection.DriverConnectionProvider
+INFO  2015-07-23 16:34:25,815  3464ms ConnectionProvider     lambda_method      - Configuring ConnectionProvider
+INFO  2015-07-23 16:34:25,830  3479ms SettingsFactory        lambda_method      - Transaction factory: NHibernate.Transaction.AdoNetWithDistributedTransactionFactory
+INFO  2015-07-23 16:34:25,831  3480ms SettingsFactory        lambda_method      - Optimize cache for minimal puts: False
+INFO  2015-07-23 16:34:25,831  3480ms SettingsFactory        lambda_method      - Connection release mode: auto
+INFO  2015-07-23 16:34:25,832  3481ms SettingsFactory        lambda_method      - Default schema: WPP
+INFO  2015-07-23 16:34:25,832  3481ms SettingsFactory        lambda_method      - Default batch fetch size: 1
+INFO  2015-07-23 16:34:25,833  3482ms SettingsFactory        lambda_method      - echoing all SQL to stdout
+INFO  2015-07-23 16:34:25,833  3482ms SettingsFactory        lambda_method      - Statistics: disabled
+INFO  2015-07-23 16:34:25,834  3483ms SettingsFactory        lambda_method      - Deleted entity synthetic identifier rollback: disabled
+INFO  2015-07-23 16:34:25,834  3483ms SettingsFactory        lambda_method      - Query translator: NHibernate.Hql.Ast.ANTLR.ASTQueryTranslatorFactory
+INFO  2015-07-23 16:34:25,835  3484ms SettingsFactory        lambda_method      - Query language substitutions: {}
+INFO  2015-07-23 16:34:25,837  3486ms SettingsFactory        lambda_method      - cache provider: NHibernate.Cache.NoCacheProvider, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:34:25,837  3486ms SettingsFactory        lambda_method      - Order SQL inserts for batching: disabled
+DEBUG 2015-07-23 16:34:25,838  3487ms SettingsFactory        lambda_method      - Wrap result sets: disabled
+INFO  2015-07-23 16:34:25,839  3488ms SettingsFactory        lambda_method      - Batcher factory: NHibernate.AdoNet.NonBatchingBatcherFactory, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4
+INFO  2015-07-23 16:34:25,839  3488ms SettingsFactory        lambda_method      - Default entity-mode: Poco
+INFO  2015-07-23 16:34:25,840  3489ms SettingsFactory        lambda_method      - Named query checking : enabled
+INFO  2015-07-23 16:34:25,840  3489ms SettingsFactory        lambda_method      - Ignoring exceptions in BeforeTransactionCompletion : disabled
+INFO  2015-07-23 16:34:25,850  3499ms SessionFactoryImpl     lambda_method      - building session factory
+DEBUG 2015-07-23 16:34:25,851  3500ms SessionFactoryImpl     lambda_method      - Session factory constructed with filter configurations : {}
+DEBUG 2015-07-23 16:34:25,851  3500ms SessionFactoryImpl     lambda_method      - instantiating session factory with properties: {'use_reflection_optimizer'='True', 'connection.provider'='NHibernate.Connection.DriverConnectionProvider', 'connection.driver_class'='NHibernate.Driver.OracleClientDriver, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'hibernate.dialect'='NHibernate.Dialect.Oracle10gDialect, NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4', 'default_schema'='WPP', 'show_sql'='true', 'connection.connection_string'='Data Source=xe;Persist Security Info=True;User ID=system;Password=root;Unicode=True'}
+DEBUG 2015-07-23 16:34:25,853  3502ms iverConnectionProvider lambda_method      - Obtaining IDbConnection from Driver

@@ -13,13 +13,13 @@ namespace WPP.Security
             base.OnAuthorization(filterContext);
             if (!filterContext.HttpContext.User.Identity.IsAuthenticated)
             {
-                filterContext.Result = new RedirectResult("~/Account/Login");
+                filterContext.Result = new RedirectResult("~/Usuario/Login");
                 return;
             }
 
             if (filterContext.Result is HttpUnauthorizedResult)
             {
-                filterContext.Result = new RedirectResult("~/Account/AccessDenied");
+                filterContext.Result = new RedirectResult("~/Usuario/AccessDenied");
             }
         }
     }
