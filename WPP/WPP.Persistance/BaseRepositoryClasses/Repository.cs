@@ -91,7 +91,7 @@ namespace WPP.Persistance.BaseRepositoryClasses
         {
              
             ICriteria criteria = Session.CreateCriteria<T>();
-           // criteria.Add(Restrictions.Not(Restrictions.Eq("IsDeleted", true)));
+            criteria.Add(Restrictions.Not(Restrictions.Eq("IsDeleted", true)));
             var resultado = criteria.List<T>();//Session.Transact(() => criteria.List<T>());
        
             return resultado;

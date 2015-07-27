@@ -6,10 +6,11 @@ using System.Web.Mvc;
 using System.Web.Security;
 using WPP.Entities.Objects.Generales;
 using WPP.Helpers;
-using WPP.Models;
-using WPP.Models.Generales;
 using WPP.Security;
 using WPP.Service.ModuloContratos;
+using WPP.Mapper;
+using WPP.Model;
+using WPP.Model.General;
 
 namespace WPP.Controllers
 {
@@ -18,17 +19,20 @@ namespace WPP.Controllers
 
         private IUsuarioService usuarioService;
         private IWPPMembershipProvider wppMemberShipProvider;
+        private UsuarioMapper usuarioMapper;
 
         public UsuarioController(IUsuarioService service, IWPPMembershipProvider WPPMemberProvider)
         {
             try
             {
+                
                 this.usuarioService = service;
                 wppMemberShipProvider = WPPMemberProvider;
+                usuarioMapper = new UsuarioMapper();
             }
             catch (Exception ex)
             {
-
+                logger.Error(ex.Message);
             }
         }
 
@@ -43,26 +47,27 @@ namespace WPP.Controllers
         [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROLES_ADMINISTRACION)]
         public ActionResult Index()
         {
-            ViewBag.UsuariosList = usuarioService.ListAll();
-            IList<UsuarioModel> models = new List<UsuarioModel>();
-            UsuarioModel temp = null;
-
-            foreach (var item in usuarioService.ListAll())
+            try
             {
-                temp = new UsuarioModel();
-                temp.Id = item.Id;
-                temp.Nombre = item.Nombre;
-                temp.Apellido = item.Apellidos;
-                temp.Email = item.Email;
-                temp.FechaNac = item.FechaNac;
-                temp.Roles = item.Roles;
+                ViewBag.UsuariosList = usuarioService.ListAll();
+                IList<UsuarioModel> models = new List<UsuarioModel>();
 
-                models.Add(temp);
+                foreach (var item in usuarioService.ListAll())
+                {
+                    models.Add(usuarioMapper.GetUsuarioModel(item));            
+                }
+
+                ViewBag.UsuariosList = models;  
+
+				
             }
-
-            ViewBag.UsuariosList = models;
+            catch (Exception ex)
+            {
+                logger.Error(ex.Message);
+            }
             
             return View("Index");
+
         }
 
 
@@ -81,12 +86,7 @@ namespace WPP.Controllers
             if (ModelState.IsValid)
             {
                 Usuario nuevoUsuario = new Usuario();
-                nuevoUsuario.Nombre = usuario.Nombre;
-                nuevoUsuario.Apellidos = usuario.Apellido;
-                nuevoUsuario.Email = usuario.Email;
-                nuevoUsuario.Password = usuario.Password;
-                nuevoUsuario.Roles = usuario.Roles;
-                nuevoUsuario.FechaNac = usuario.FechaNac;
+                nuevoUsuario = usuarioMapper.GetUsuario(usuario);
                 nuevoUsuario.Version = 1;
                 nuevoUsuario.CreateDate = DateTime.Now;
                 nuevoUsuario.DateLastModified = DateTime.Now;
@@ -96,6 +96,7 @@ namespace WPP.Controllers
                 ViewBag.Mensaje = "Se ha creado el usuario";
 
                 return Index();
+
             }
             else
             {
@@ -104,6 +105,32 @@ namespace WPP.Controllers
             }
         }
 
+        [HttpPost]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        public ActionResult Delete(UsuarioModel model, bool confirmed)
+        {
+            try
+            {
+                if (confirmed)
+                {
+
+                    Usuario usuario = usuarioService.Get(model.Id);
+                    usuario.IsDeleted = true;
+                    usuarioService.Update(usuario);
+                }
+                else
+                {
+                    ViewData["ErrorMessage"] = "Ha ocurrido un error al eliminar la información";
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewData["ErrorMessage"] = "Ha ocurrido un error al eliminar la información";
+                logger.Error(ex.Message);
+            }
+            return null;
+        }
 
         [HttpGet]
         [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]

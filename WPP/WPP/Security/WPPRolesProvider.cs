@@ -62,6 +62,7 @@ namespace WPP.Security
                 return empty;
             }
 
+
         }
 
         public override string[] GetUsersInRole(string roleName)
