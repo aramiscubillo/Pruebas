@@ -41,6 +41,6 @@ namespace WPP.Security
         
         void UpdateUser(MembershipUser user);
 
-        Usuario ValidateUser(string username, string password);
+        bool ValidateUser(string username, string password);
     }
 }

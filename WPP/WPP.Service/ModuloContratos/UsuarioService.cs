@@ -13,20 +13,11 @@ namespace WPP.Service.ModuloContratos
     public class UsuarioService : IUsuarioService
     {
         private IRepository<Usuario> repository;
-        //private ICompaniaRepository repository;
-        //private IRepositoryFactory<Compania> repositoryFactory;
-        //private readonly IQueryManager queryManager;
 
-          public UsuarioService(IRepository<Usuario> _repository)
+        public UsuarioService(IRepository<Usuario> _repository)
         {
             repository = _repository;
         }
-
-
-        //public CompaniaService(ICompaniaRepository companiaRepository)
-        //{
-        //    repository = companiaRepository;
-        //}
 
           public Usuario Get(Guid id)
         {

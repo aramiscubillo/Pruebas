@@ -131,6 +131,10 @@ namespace WPP.Service.BaseServiceClasses
 
         public void BeginTransaction()
         {
+            if (!Session.IsOpen)
+            {
+                Session = _sessionFactory.OpenSession();
+            }
             _transaction = Session.BeginTransaction();
         }
 

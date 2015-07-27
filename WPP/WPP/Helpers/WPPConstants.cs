@@ -18,7 +18,5 @@ namespace WPP.Helpers
 
         public static readonly  String[] ListaRoles = { ROL_ADMINISTRADOR, ROL_SUPER_USUARIO };
 
-        public static Usuario Usuario;
-       
     }
 }

@@ -90,6 +90,7 @@ namespace WPP.Controllers
                 nuevoUsuario.Version = 1;
                 nuevoUsuario.CreateDate = DateTime.Now;
                 nuevoUsuario.DateLastModified = DateTime.Now;
+                nuevoUsuario.Password = WPPHelper.MD5Encryptor(nuevoUsuario.Password);
 
                 usuarioService.Create(nuevoUsuario);
 
@@ -145,11 +146,9 @@ namespace WPP.Controllers
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
         {
-            Usuario usuario = wppMemberShipProvider.ValidateUser(login.Email, login.Password);
-
-            if (ModelState.IsValid && usuario != null)
+            string password = WPPHelper.MD5Encryptor(login.Password);
+            if (ModelState.IsValid && wppMemberShipProvider.ValidateUser(login.Email, password))
             {
-                WPPConstants.Usuario = usuario;
                 FormsAuthentication.SetAuthCookie(login.Email, true);
                 return RedirectURL(returnUrl);
             }

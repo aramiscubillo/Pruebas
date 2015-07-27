@@ -71,7 +71,7 @@ namespace WPP.App_Start
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
           //  kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
             kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().Excluding<UnitOfWork>().BindDefaultInterface());
-
+            kernel.Bind<RoleProvider>().To<WPPRolesProvider>();
             //kernel.Bind<IUsuarioService>().To<UsuarioService>().InRequestScope();
         }
     }
