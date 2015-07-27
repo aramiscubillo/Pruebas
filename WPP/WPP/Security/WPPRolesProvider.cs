@@ -53,18 +53,15 @@ namespace WPP.Security
         {
             Usuario usuario = WPPConstants.Usuario;
 
-            return usuario.Roles.Split(',');
+            if (usuario != null)
+                return usuario.Roles.Split(',');
+            else
+            {
+                String[] empty = new String[1];
+                empty[0] = "";
+                return empty;
+            }
 
-            //switch (username)
-            //{
-                   
-            //    case "aramis.cubillo@yahoo.com":
-            //            return new[]{"Manager", "Admin"};
-            //    case "dbarboza@sapiens.co.cr":
-            //            return new[] { "Manager", "Admin" };  
-            //    default:
-            //        return new string[]{};
-            //}
         }
 
         public override string[] GetUsersInRole(string roleName)

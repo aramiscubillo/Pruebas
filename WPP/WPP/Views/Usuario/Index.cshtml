@@ -8,6 +8,12 @@
 
 <h2>Usuarios</h2>
 
+
+@if (ViewBag.Mensaje != null)
+{
+    Html.Raw(ViewBag.Mensaje);
+}
+
 <br /><br />
 
 @Html.ActionLink("Crear Usuario", "CrearUsuario", "Usuario", new { @class = "btn btn-primary" })
@@ -43,3 +49,20 @@
 </div>
 
 
+
+
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("div.custList > table > tr").live('click', function () {
+            alert("You clicked my <tr>!");
+            //get <td> element values here!!??
+        });
+
+    });// end document ready
+
+
+
+</script>

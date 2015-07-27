@@ -47,29 +47,10 @@ namespace WPP.Controllers
             }
         }
 
-        [AccessDeniedAuthorizeAttribute(Roles = "SuperUser")]
-        public ActionResult TestMethod()
-        {
-            return View();
-        }
-
-
-      // [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
-
+       [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROLES_ADMINISTRACION)]
         public ActionResult Index()
         {
-        //  CompaniaMapper companiaMapper = new CompaniaMapper();
-        //  Compania compania = companiaService.Create(new Compania { Nombre = "Compania 2", Cedula = "456", Id = new Guid() });
-          // CompaniaModel companiaModel = companiaMapper.GetCompaniaModel(compania);
-
-            Session[""] = null;
-            //String f = "";
-            //f += "";
-            //usuarioService.Create(new Usuario { Id = new Guid(), Nombre = "Usuario1" });
-
-
-
-           return View("Index");//, companiaModel
+           return View("Index");
         }
 
     }

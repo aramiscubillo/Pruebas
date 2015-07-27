@@ -40,7 +40,7 @@ namespace WPP.Controllers
         }
 
         [HttpGet]
-        //[AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROLES_ADMINISTRACION)]
         public ActionResult Index()
         {
             ViewBag.UsuariosList = usuarioService.ListAll();
@@ -62,11 +62,12 @@ namespace WPP.Controllers
 
             ViewBag.UsuariosList = models;
             
-            return View();
+            return View("Index");
         }
 
 
         [HttpGet]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult CrearUsuario()
         {
             ViewBag.Roles = WPPConstants.ListaRoles;
@@ -74,6 +75,7 @@ namespace WPP.Controllers
         }
 
 
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult CrearUsuario(UsuarioModel usuario)
         {
             if (ModelState.IsValid)
@@ -91,12 +93,24 @@ namespace WPP.Controllers
 
                 usuarioService.Create(nuevoUsuario);
 
-                return View("Index");
+                ViewBag.Mensaje = "Se ha creado el usuario";
+
+                return Index();
             }
             else
             {
+                ViewBag.Roles = WPPConstants.ListaRoles;
                 return View();
             }
+        }
+
+
+        [HttpGet]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        public ActionResult EditarUsuario(Guid idUsuario)
+        {
+            ViewBag.Roles = WPPConstants.ListaRoles;
+            return View();
         }
 
 
@@ -104,8 +118,11 @@ namespace WPP.Controllers
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
         {
-            if (ModelState.IsValid && wppMemberShipProvider.ValidateUser(login.Email, login.Password))
+            Usuario usuario = wppMemberShipProvider.ValidateUser(login.Email, login.Password);
+
+            if (ModelState.IsValid && usuario != null)
             {
+                WPPConstants.Usuario = usuario;
                 FormsAuthentication.SetAuthCookie(login.Email, true);
                 return RedirectURL(returnUrl);
             }

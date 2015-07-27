@@ -169,6 +169,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\datepicker.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -201,11 +202,11 @@
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Shared\_LogInLayout.cshtml" />
-    <Content Include="Views\Home\TestMethod.cshtml" />
     <Content Include="Views\Usuario\AccessDenied.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Usuario\CrearUsuario.cshtml" />
+    <Content Include="Views\Usuario\EditarUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
