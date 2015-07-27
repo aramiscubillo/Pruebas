@@ -90,6 +90,7 @@ namespace WPP.Controllers
                 nuevoUsuario.Version = 1;
                 nuevoUsuario.CreateDate = DateTime.Now;
                 nuevoUsuario.DateLastModified = DateTime.Now;
+                nuevoUsuario.Password = WPPHelper.MD5Encryptor(nuevoUsuario.Password);
 
                 usuarioService.Create(nuevoUsuario);
 
@@ -136,8 +137,34 @@ namespace WPP.Controllers
         [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult EditarUsuario(Guid idUsuario)
         {
+            UsuarioMapper mapper = new UsuarioMapper();
+            UsuarioModel usuario = mapper.GetUsuarioModel(usuarioService.Get(idUsuario));
+
             ViewBag.Roles = WPPConstants.ListaRoles;
-            return View();
+            return View(usuario);
+        }
+
+
+
+        [HttpPost]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        public ActionResult EditarUsuario(UsuarioModel usuarioModel)
+        {
+ 
+            Usuario usuario = usuarioService.Get(usuarioModel.Id);
+
+            usuario.Nombre = usuarioModel.Nombre;
+            usuario.Apellidos = usuarioModel.Apellidos;
+            usuario.DateLastModified = DateTime.Now;
+            usuario.Email = usuarioModel.Email;
+            usuario.FechaNac = usuarioModel.FechaNac;
+            usuario.Roles = usuarioModel.Email;
+            usuario.Version++;
+
+            usuarioService.Update(usuario);
+
+            ViewBag.Roles = WPPConstants.ListaRoles;
+            return Index();
         }
 
 
@@ -145,11 +172,9 @@ namespace WPP.Controllers
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
         {
-            Usuario usuario = wppMemberShipProvider.ValidateUser(login.Email, login.Password);
-
-            if (ModelState.IsValid && usuario != null)
+            string password = WPPHelper.MD5Encryptor(login.Password);
+            if (ModelState.IsValid && wppMemberShipProvider.ValidateUser(login.Email, password))
             {
-                WPPConstants.Usuario = usuario;
                 FormsAuthentication.SetAuthCookie(login.Email, true);
                 return RedirectURL(returnUrl);
             }

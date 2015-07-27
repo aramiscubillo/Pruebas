@@ -24,13 +24,14 @@
 <div class="row">
     <div class="col-md-12">
 
-        <table class="table table-hover">
+        <table class="table table-hover" id="tabla-usuarios">
             <tr>
                 <th>Email</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Edad</th>
                 <th>Roles</th>
+                <th></th>
             </tr>
 
             @foreach (var item in ViewBag.UsuariosList as IList<UsuarioModel>)
@@ -41,6 +42,8 @@
                     <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
                     <td>@Html.DisplayFor(modelItem => item.Edad)</td>
                     <td>@Html.DisplayFor(modelItem => item.Roles)</td>
+                    @*<th><button type="button" class="btn btn-default" onclick="editarUsuario('@Html.Encode(item.Id)edit')">Editar</button></th>*@
+                    <th>@Html.ActionLink("Editar", "EditarUsuario", "Usuario", new { IdUsuario = item.Id }, new { @class = "btn btn-primary" })</th>
                     @*<td>
                        <input type="button" value="Editar" class="btnEdit" id="@Html.Encode(item.Id)edit" onclick="edit(this)" />&nbsp;
                         <input type="button" value="Detalles" class="btnDetails" id="@Html.Encode(item.Id)details" onclick="details(this)" />&nbsp;
@@ -59,10 +62,10 @@
 
     $(document).ready(function () {
 
-        $("div.custList > table > tr").live('click', function () {
-            alert("You clicked my <tr>!");
-            //get <td> element values here!!??
-        });
+        function editarUsuario(IdUsuario) {
+
+        }
+     
 
     });// end document ready
 

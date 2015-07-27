@@ -163,7 +163,7 @@ namespace WPP.Security
             throw new NotImplementedException();
         }
 
-        public Usuario ValidateUser(string username, string password)
+        public bool ValidateUser(string username, string password)
         {
             IDictionary<string, object> criteriaUser = new Dictionary<string, object>();
             criteriaUser.Add("Email", username);
@@ -171,11 +171,10 @@ namespace WPP.Security
 
             Usuario usuario = usuarioService.Get(criteriaUser);
 
-            return usuario;
-            //if (usuario != null)
-            //{ return true; }
-            //else
-            //{ return false; }           
+            if (usuario != null)
+            { return true; }
+            else
+            { return false; }           
         }
     }
 }
