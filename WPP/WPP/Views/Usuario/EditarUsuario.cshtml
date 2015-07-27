@@ -1,0 +1,128 @@
+﻿@model WPP.Models.Generales.UsuarioModel
+
+@{
+    ViewBag.Title = "Crear Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Crear Usuario</h2>
+
+@using (Html.BeginForm("CrearUsuario", "Usuario", FormMethod.Post, new { id = "frmEditarUsuario", @class = "form-horizontal" }))
+{
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        @Html.EditorFor(m => m.Nombre, new { @Class = "form-control", id = "Nombre" })
+        @Html.ValidationMessageFor(m => m.Nombre)
+    </div>
+    <div class="form-group">
+        <label for="Apellido">Apellido</label>
+        @Html.EditorFor(m => m.Apellido, new { @Class = "form-control", id = "Apellido" })
+        @Html.ValidationMessageFor(m => m.Apellido)
+    </div>
+    <div class="form-group">
+        <label for="FechaNac">Fecha de nacimiento</label>
+        @Html.EditorFor(m => m.FechaNac, new { @Class = "form-control", id = "FechaNac" })
+        @Html.ValidationMessageFor(m => m.FechaNac)
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        @Html.EditorFor(m => m.Email, new { @Class = "form-control", id = "Email" })
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div class="form-group">
+        <label for="Password">Contraseña</label>
+        @Html.PasswordFor(m => m.Password, new { @Class = "form-control", id = "Password" })
+        @Html.ValidationMessageFor(m => m.Password)
+    </div>
+    <div class="form-group">
+        <label for="ConfirmPassword">Confirmar Contraseña</label>
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @Class = "form-control", id = "ConfirmPassword" })
+        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+    </div>
+    <div class="form-group">
+        <label for="nombre">Roles</label>
+        @Html.ValidationMessageFor(m => m.Roles)
+        <br />
+        @Html.HiddenFor(m => m.Roles)
+        @foreach (var r in ViewBag.Roles)
+        {
+            if (Model.Roles.Contains(r))
+            {
+                <input type="checkbox" value='@Html.DisplayFor(s => r)' name="ckbRoles" checked="checked" />
+            }
+            else
+            {
+                <input type="checkbox" value='@Html.DisplayFor(s => r)' name="ckbRoles" />
+            }
+
+            @Html.DisplayFor(s => r)
+            <br />
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    @Html.ActionLink("Cancelar", "Index", "Usuario", new { @Class = "btn btn-primary" }, null)
+
+}
+
+
+
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+
+        var initialRoles = '';
+
+        $('#FechaNac').datepicker({
+            dateFormat: 'dd-mm-yy',
+            changeYear: true
+        });
+
+        $("input:checkbox[name='ckbRoles']").each(function () {
+            if ($(this).is(":checked")) {
+                initialRoles = (initialRoles == '') ? $(this).val() : initialRoles + ',' + $(this).val();
+            }
+        });
+
+        $("input#Roles").val(initialRoles);
+
+        $("input:checkbox[name='ckbRoles']").change(function () {
+            actual = $("input#Roles").val();
+            append = $(this).val();
+            if ($(this).is(":checked")) {
+                if (!actual) {
+                    actual = append;
+                    $("input#Roles").val(actual);
+                } else {
+                    actual = actual + ',' + append;
+                    $("input#Roles").val(actual);
+                }
+            } else {
+                if (actual) {
+                    if (actual.indexOf(append) == 0) {
+                        if (actual == append) {
+                            actual = '';
+                        } else {
+                            actual = actual.split(append + ',').pop();
+                        }
+                        $("input#Roles").val(actual);
+                    } else {
+                        preStr = actual.substring(0, actual.indexOf(append) - 1);
+                        postStr = actual.split(append).pop();
+                        actual = preStr + postStr;
+                        $("input#Roles").val(actual);
+                    }
+                }
+            }
+            //alert(actual);
+        });
+
+    });// end document ready
+
+
+
+</script>

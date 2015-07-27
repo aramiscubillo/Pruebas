@@ -1,0 +1,48 @@
+﻿@model WPP.Model.UsuarioModel
+
+@{
+    ViewBag.Title = "EliminarUsuario";
+}
+
+<div class="ui-widget ui-helper-hidden" id="errorblock-div1">
+    <div class="ui-state-error ui-corner-all" style="padding: 0pt 0.7em;" id="errorblock-div2" style="display:none;">
+        <p>
+            <!-- JDR: fancy icon -->
+            <span class="ui-icon ui-icon-alert" style="float: left; margin-right: 0.3em;"></span>
+            <strong>Alerta:</strong> Se detectaron los siguientes errores:
+        </p>
+        <!-- JDR: validation plugin will target this UL for error messages -->
+        <ul></ul>
+    </div>
+</div>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="ui-widget">
+        <div style="padding: 0 .7em;" class="ui-state-error ui-corner-all">
+            <p>
+                <span style="float: left; margin-right: .3em;" class="ui-icon ui-icon-alert"></span>
+                <strong>Alerta:</strong>
+                @TempData["ErrorMessage"].ToString()
+            </p>
+        </div>
+    </div>
+}
+@using (Html.BeginForm("Delete", "Usuario", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>@Html.DisplayFor(model => model.Nombre)</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                @Html.CheckBox("confirmed", false)
+                <label>¿Está seguro que desea borrar esto?</label>
+            </td>
+        </tr>
+
+    </table>
+    @Html.HiddenFor(m => m.Id)
+}
+
+

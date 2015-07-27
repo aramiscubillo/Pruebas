@@ -1,0 +1,71 @@
+﻿@model WPP.Model.UsuarioModel
+@using WPP.Model;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Usuarios</h2>
+
+
+@if (ViewBag.Mensaje != null)
+{
+    Html.Raw(ViewBag.Mensaje);
+}
+
+<br /><br />
+
+@Html.ActionLink("Crear Usuario", "CrearUsuario", "Usuario", new { @class = "btn btn-primary" })
+
+<br /><br />
+<div id="editForm">
+</div>
+<div class="row">
+    <div class="col-md-12">
+
+        <table class="table table-hover">
+            <tr>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Edad</th>
+                <th>Roles</th>
+            </tr>
+
+            @foreach (var item in ViewBag.UsuariosList as IList<UsuarioModel>)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Apellidos)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Edad)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Roles)</td>
+                    @*<td>
+                       <input type="button" value="Editar" class="btnEdit" id="@Html.Encode(item.Id)edit" onclick="edit(this)" />&nbsp;
+                        <input type="button" value="Detalles" class="btnDetails" id="@Html.Encode(item.Id)details" onclick="details(this)" />&nbsp;
+                        <input type="button" value="Borrar" class="btnDelete" id="@Html.Encode(item.Id)delete" onclick="del(this)" />&nbsp;
+                    </td>*@
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>
+
+
+<script language="javascript" type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("div.custList > table > tr").live('click', function () {
+            alert("You clicked my <tr>!");
+            //get <td> element values here!!??
+        });
+
+    });// end document ready
+
+
+
+</script>
