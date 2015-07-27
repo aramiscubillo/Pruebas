@@ -72,7 +72,7 @@ namespace WPP.Controllers
 
 
         [HttpGet]
-        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+       // [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult CrearUsuario()
         {
             ViewBag.Roles = WPPConstants.ListaRoles;
@@ -80,7 +80,7 @@ namespace WPP.Controllers
         }
 
 
-        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        //[AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult CrearUsuario(UsuarioModel usuario)
         {
             if (ModelState.IsValid)
@@ -139,7 +139,8 @@ namespace WPP.Controllers
         {
             UsuarioMapper mapper = new UsuarioMapper();
             UsuarioModel usuario = mapper.GetUsuarioModel(usuarioService.Get(idUsuario));
-
+            String testing  = DateTime.Now.ToShortDateString();
+            testing+="";
             ViewBag.Roles = WPPConstants.ListaRoles;
             return View(usuario);
         }
