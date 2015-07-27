@@ -1,4 +1,4 @@
-﻿@model WPP.Models.Generales.UsuarioModel
+﻿@model WPP.Model.UsuarioModel
 
 @{
     ViewBag.Title = "Crear Usuario";
@@ -17,9 +17,9 @@
         @Html.ValidationMessageFor(m => m.Nombre)
     </div>
     <div class="form-group">
-        <label for="Apellido">Apellido</label>
-        @Html.EditorFor(m => m.Apellido, new { @Class = "form-control", id = "Apellido" })
-        @Html.ValidationMessageFor(m => m.Apellido)
+        <label for="Apellido">Apellidos</label>
+        @Html.EditorFor(m => m.Apellidos, new { @Class = "form-control", id = "Apellido" })
+        @Html.ValidationMessageFor(m => m.Apellidos)
     </div>
     <div class="form-group">
         <label for="FechaNac">Fecha de nacimiento</label>
