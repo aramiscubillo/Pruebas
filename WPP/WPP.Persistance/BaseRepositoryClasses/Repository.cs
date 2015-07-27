@@ -69,13 +69,27 @@ namespace WPP.Persistance.BaseRepositoryClasses
         public T Get(IDictionary<string, object> criterias)
         {
 
+            if (!Session.IsOpen)
+            {
+                _unitOfWork.BeginTransaction();
+            }
+
             ICriteria criteria = Session.CreateCriteria<T>();
-            
+           
             foreach (var x in criterias)
             {
                 criteria.Add(Restrictions.Eq(x.Key, x.Value));
             }
-            return criteria.UniqueResult<T>();            
+
+
+            var resultado = criteria.UniqueResult<T>();
+
+            if (!Session.IsOpen)
+            {
+                _unitOfWork.Commit();
+            }
+
+            return resultado;            
             //return resultado.FirstOrDefault<T>();
         }
 

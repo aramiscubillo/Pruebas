@@ -2,20 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.Web.Security;
 using WPP.Entities.Objects.Generales;
 using WPP.Helpers;
+using WPP.Service.ModuloContratos;
 
 namespace WPP.Security
 {
     public class WPPRolesProvider : RoleProvider
     {
+         private IUsuarioService usuarioService;
+
+
+         public WPPRolesProvider()
+        {
+            usuarioService = DependencyResolver.Current.GetService<IUsuarioService>();
+        }
+
+        
         public override void AddUsersToRoles(string[] usernames, string[] roleNames)
         {
             throw new NotImplementedException();
         }
-
-   
 
         public override string ApplicationName
         {
@@ -51,7 +60,9 @@ namespace WPP.Security
 
         public override string[] GetRolesForUser(string username)
         {
-            Usuario usuario = WPPConstants.Usuario;
+            IDictionary<string, object> criteriaUser = new Dictionary<string, object>();
+            criteriaUser.Add("Email", username);
+            Usuario usuario = usuarioService.Get(criteriaUser);
 
             if (usuario != null)
                 return usuario.Roles.Split(',');
