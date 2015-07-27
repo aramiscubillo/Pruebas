@@ -144,6 +144,29 @@ namespace WPP.Controllers
         }
 
 
+
+        [HttpPost]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        public ActionResult EditarUsuario(UsuarioModel usuarioModel)
+        {
+ 
+            Usuario usuario = usuarioService.Get(usuarioModel.Id);
+
+            usuario.Nombre = usuarioModel.Nombre;
+            usuario.Apellidos = usuarioModel.Apellidos;
+            usuario.DateLastModified = DateTime.Now;
+            usuario.Email = usuarioModel.Email;
+            usuario.FechaNac = usuarioModel.FechaNac;
+            usuario.Roles = usuarioModel.Email;
+            usuario.Version++;
+
+            usuarioService.Update(usuario);
+
+            ViewBag.Roles = WPPConstants.ListaRoles;
+            return Index();
+        }
+
+
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
