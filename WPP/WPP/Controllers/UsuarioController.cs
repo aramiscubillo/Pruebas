@@ -136,8 +136,11 @@ namespace WPP.Controllers
         [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult EditarUsuario(Guid idUsuario)
         {
+            UsuarioMapper mapper = new UsuarioMapper();
+            UsuarioModel usuario = mapper.GetUsuarioModel(usuarioService.Get(idUsuario));
+
             ViewBag.Roles = WPPConstants.ListaRoles;
-            return View();
+            return View(usuario);
         }
 
 
