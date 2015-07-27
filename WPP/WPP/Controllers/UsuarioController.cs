@@ -10,7 +10,7 @@ using WPP.Security;
 using WPP.Service.ModuloContratos;
 using WPP.Mapper;
 using WPP.Model;
-using WPP.Models;
+using WPP.Model.General;
 
 namespace WPP.Controllers
 {
@@ -32,7 +32,7 @@ namespace WPP.Controllers
             }
             catch (Exception ex)
             {
-
+                logger.Error(ex.Message);
             }
         }
 
@@ -47,16 +47,23 @@ namespace WPP.Controllers
         [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult Index()
         {
-            ViewBag.UsuariosList = usuarioService.ListAll();
-            IList<UsuarioModel> models = new List<UsuarioModel>();
-
-            foreach (var item in usuarioService.ListAll())
+            try
             {
-                models.Add(usuarioMapper.GetUsuarioModel(item));            
+                ViewBag.UsuariosList = usuarioService.ListAll();
+                IList<UsuarioModel> models = new List<UsuarioModel>();
+
+                foreach (var item in usuarioService.ListAll())
+                {
+                    models.Add(usuarioMapper.GetUsuarioModel(item));            
+                }
+
+                ViewBag.UsuariosList = models;            
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex.Message);
             }
 
-            ViewBag.UsuariosList = models;
-            
             return View();
         }
 
@@ -81,12 +88,39 @@ namespace WPP.Controllers
 
                 usuarioService.Create(nuevoUsuario);
 
-                return View("Index");
+                return Index();//View("Index");
             }
             else
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        public ActionResult Delete(UsuarioModel model, bool confirmed)
+        {
+            try
+            {
+                if (confirmed)
+                {
+
+                    Usuario usuario = usuarioService.Get(model.Id);
+                    usuario.IsDeleted = true;
+                    usuarioService.Update(usuario);
+                }
+                else
+                {
+                    ViewData["ErrorMessage"] = "Ha ocurrido un error al eliminar la información";
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewData["ErrorMessage"] = "Ha ocurrido un error al eliminar la información";
+                logger.Error(ex.Message);
+            }
+            return null;
         }
 
         [HttpPost]

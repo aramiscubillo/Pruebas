@@ -15,7 +15,7 @@ namespace WPP.Model
         public String Nombre { get; set; }
 
         [Required(ErrorMessage = "Por favor introduzca el apellido")]
-        public String Apellido { get; set; }
+        public String Apellidos { get; set; }
 
         [Required(ErrorMessage = "Por favor introduzca la fecha de nacimiento")]
         public DateTime FechaNac { get; set; }
