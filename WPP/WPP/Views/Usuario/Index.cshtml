@@ -1,5 +1,5 @@
-﻿@model WPP.Models.Generales.UsuarioModel
-@using WPP.Models.Generales
+﻿@model WPP.Model.UsuarioModel
+@using WPP.Model;
 
 @{
     ViewBag.Title = "Index";
@@ -13,7 +13,8 @@
 @Html.ActionLink("Crear Usuario", "CrearUsuario", "Usuario", new { @class = "btn btn-primary" })
 
 <br /><br />
-
+<div id="editForm">
+</div>
 <div class="row">
     <div class="col-md-12">
 
@@ -34,6 +35,11 @@
                     <td>@Html.DisplayFor(modelItem => item.Apellido)</td>
                     <td>@Html.DisplayFor(modelItem => item.Edad)</td>
                     <td>@Html.DisplayFor(modelItem => item.Roles)</td>
+                    @*<td>
+                       <input type="button" value="Editar" class="btnEdit" id="@Html.Encode(item.Id)edit" onclick="edit(this)" />&nbsp;
+                        <input type="button" value="Detalles" class="btnDetails" id="@Html.Encode(item.Id)details" onclick="details(this)" />&nbsp;
+                        <input type="button" value="Borrar" class="btnDelete" id="@Html.Encode(item.Id)delete" onclick="del(this)" />&nbsp;
+                    </td>*@
                 </tr>
             }
 
@@ -41,5 +47,4 @@
 
     </div>
 </div>
-
 

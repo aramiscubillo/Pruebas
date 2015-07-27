@@ -6,10 +6,11 @@ using System.Web.Mvc;
 using System.Web.Security;
 using WPP.Entities.Objects.Generales;
 using WPP.Helpers;
-using WPP.Models;
-using WPP.Models.Generales;
 using WPP.Security;
 using WPP.Service.ModuloContratos;
+using WPP.Mapper;
+using WPP.Model;
+using WPP.Models;
 
 namespace WPP.Controllers
 {
@@ -18,13 +19,16 @@ namespace WPP.Controllers
 
         private IUsuarioService usuarioService;
         private IWPPMembershipProvider wppMemberShipProvider;
+        private UsuarioMapper usuarioMapper;
 
         public UsuarioController(IUsuarioService service, IWPPMembershipProvider WPPMemberProvider)
         {
             try
             {
+                
                 this.usuarioService = service;
                 wppMemberShipProvider = WPPMemberProvider;
+                usuarioMapper = new UsuarioMapper();
             }
             catch (Exception ex)
             {
@@ -40,24 +44,15 @@ namespace WPP.Controllers
         }
 
         [HttpGet]
-        //[AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
+        [AccessDeniedAuthorizeAttribute(Roles = WPPConstants.ROL_SUPER_USUARIO)]
         public ActionResult Index()
         {
             ViewBag.UsuariosList = usuarioService.ListAll();
             IList<UsuarioModel> models = new List<UsuarioModel>();
-            UsuarioModel temp = null;
 
             foreach (var item in usuarioService.ListAll())
             {
-                temp = new UsuarioModel();
-                temp.Id = item.Id;
-                temp.Nombre = item.Nombre;
-                temp.Apellido = item.Apellidos;
-                temp.Email = item.Email;
-                temp.FechaNac = item.FechaNac;
-                temp.Roles = item.Roles;
-
-                models.Add(temp);
+                models.Add(usuarioMapper.GetUsuarioModel(item));            
             }
 
             ViewBag.UsuariosList = models;
@@ -79,12 +74,7 @@ namespace WPP.Controllers
             if (ModelState.IsValid)
             {
                 Usuario nuevoUsuario = new Usuario();
-                nuevoUsuario.Nombre = usuario.Nombre;
-                nuevoUsuario.Apellidos = usuario.Apellido;
-                nuevoUsuario.Email = usuario.Email;
-                nuevoUsuario.Password = usuario.Password;
-                nuevoUsuario.Roles = usuario.Roles;
-                nuevoUsuario.FechaNac = usuario.FechaNac;
+                nuevoUsuario = usuarioMapper.GetUsuario(usuario);
                 nuevoUsuario.Version = 1;
                 nuevoUsuario.CreateDate = DateTime.Now;
                 nuevoUsuario.DateLastModified = DateTime.Now;
@@ -99,13 +89,14 @@ namespace WPP.Controllers
             }
         }
 
-
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Login(LoginModel login, string returnUrl)
         {
-            if (ModelState.IsValid && wppMemberShipProvider.ValidateUser(login.Email, login.Password))
+             Usuario usuario = wppMemberShipProvider.ValidateUser(login.Email, login.Password);
+            if (ModelState.IsValid && usuario!=null)
             {
+                WPPConstants.Usuario = usuario;
                 FormsAuthentication.SetAuthCookie(login.Email, true);
                 return RedirectURL(returnUrl);
             }
